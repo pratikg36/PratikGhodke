@@ -4,8 +4,10 @@ import { X, FileDown, ExternalLink, Printer } from 'lucide-react';
 export const ResumeModal = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
+  const pdfUrl = `${import.meta.env.BASE_URL}Pratik_Ghodke_Resume.pdf?t=20261023`;
+
   const handlePrint = () => {
-    window.open('/Pratik_Ghodke_Resume.pdf?t=20261023', '_blank');
+    window.open(pdfUrl, '_blank');
   };
 
   return (
@@ -22,7 +24,7 @@ export const ResumeModal = ({ isOpen, onClose }) => {
 
           <div className="flex items-center gap-3">
             <a
-              href="/Pratik_Ghodke_Resume.pdf?t=20261023"
+              href={pdfUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-sky-500 hover:bg-sky-400 text-white transition-colors shadow-sm"
@@ -55,7 +57,8 @@ export const ResumeModal = ({ isOpen, onClose }) => {
               <a href="mailto:pratikghodke03@gmail.com" className="text-blue-600 hover:underline">pratikghodke03@gmail.com</a> •
               <span>+91 9762878326</span> •
               <a href="https://linkedin.com/in/pratikghodke" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">linkedin.com/in/pratikghodke</a> •
-              <a href="https://github.com/PratikNeopace" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">github.com/PratikNeopace</a>
+              <a href="https://github.com/pratikg36" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">github.com/pratikg36</a> •
+              <a href="https://pratikg36.github.io/PratikGhodke/" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">pratikg36.github.io/PratikGhodke</a>
             </div>
           </div>
 
@@ -193,7 +196,7 @@ export const ResumeModal = ({ isOpen, onClose }) => {
               Close
             </button>
             <a
-              href="/Pratik_Ghodke_Resume.pdf?t=20261023"
+              href={pdfUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="px-4 py-1.5 rounded-lg text-xs font-semibold bg-sky-600 hover:bg-sky-500 text-white transition-colors"

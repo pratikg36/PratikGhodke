@@ -8,7 +8,8 @@ export const portfolioData = {
     email: "pratikghodke03@gmail.com",
     phone: "+91 9762878326",
     linkedin: "https://linkedin.com/in/pratikghodke",
-    github: "https://github.com/PratikNeopace",
+    github: "https://github.com/pratikg36",
+    portfolioUrl: "https://pratikg36.github.io/PratikGhodke/",
     status: "Available for Senior / Lead Engineering Roles",
     summary:
       "Software Engineer with ~2 years of production experience leading full-stack product lifecycles — from designing mobile frontends with Flutter & Riverpod to building scalable enterprise backends with Java 21, Spring Boot, PostgreSQL, and Liquibase. Proven track record deploying production-signed Android App Bundles (AAB) to Google Play Console and managing live Linux cloud servers.",
