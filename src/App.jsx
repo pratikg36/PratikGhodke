@@ -20,9 +20,6 @@ export function App() {
   return (
     <SmoothScroll>
       <div className="relative min-h-screen bg-[#080a0f] text-slate-100 selection:bg-sky-500/30 selection:text-sky-200 overflow-x-hidden font-sans">
-        {/* Subtle Tactile Film Grain Noise Overlay */}
-        <div className="pointer-events-none fixed inset-0 z-50 bg-noise" />
-
         {/* Fluid Desktop Cursor */}
         <CustomCursor />
 

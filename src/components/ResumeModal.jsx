@@ -58,7 +58,7 @@ export const ResumeModal = ({ isOpen, onClose }) => {
               <span>+91 9762878326</span> •
               <a href="https://linkedin.com/in/pratikghodke" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">linkedin.com/in/pratikghodke</a> •
               <a href="https://github.com/pratikg36" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">github.com/pratikg36</a> •
-              <a href="https://pratikg36.github.io/PratikGhodke/" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">pratikg36.github.io/PratikGhodke</a>
+              <a href="https://pratikg36.github.io/PratikGhodke/" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline font-semibold">Portfolio: pratikg36.github.io/PratikGhodke</a>
             </div>
           </div>
 

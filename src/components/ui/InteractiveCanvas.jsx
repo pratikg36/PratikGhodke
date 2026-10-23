@@ -4,6 +4,15 @@ export const InteractiveCanvas = ({ className = '' }) => {
   const canvasRef = useRef(null);
 
   useEffect(() => {
+    // Disable on touch devices or small screens to save GPU/CPU and prevent scroll resize stalls
+    const isTouch =
+      'ontouchstart' in window ||
+      navigator.maxTouchPoints > 0 ||
+      window.matchMedia('(pointer: coarse)').matches ||
+      window.innerWidth < 768;
+
+    if (isTouch) return;
+
     const canvas = canvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext('2d');
@@ -14,8 +23,7 @@ export const InteractiveCanvas = ({ className = '' }) => {
     let height = (canvas.height = window.innerHeight);
 
     const particles = [];
-    // Restrained particle count to eliminate visual competition with headline
-    const particleCount = window.innerWidth < 768 ? 16 : 32;
+    const particleCount = 28;
     const mouse = { x: -1000, y: -1000, radius: 120 };
 
     class Particle {
@@ -127,7 +135,7 @@ export const InteractiveCanvas = ({ className = '' }) => {
   return (
     <canvas
       ref={canvasRef}
-      className={`absolute inset-0 pointer-events-none z-0 ${className}`}
+      className={`hidden md:block absolute inset-0 pointer-events-none z-0 ${className}`}
       style={{ opacity: 0.35 }}
     />
   );

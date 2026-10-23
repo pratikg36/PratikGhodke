@@ -28,7 +28,7 @@ export const Hero = ({ onOpenResume }) => {
   }, []);
 
   return (
-    <section id="about" className="relative min-h-[94vh] flex flex-col justify-between pt-32 pb-12 sm:pt-36 sm:pb-16 overflow-hidden">
+    <section id="about" className="relative min-h-[94vh] flex flex-col justify-between pt-24 pb-12 sm:pt-32 sm:pb-16 overflow-hidden">
       {/* Interactive Constellation Canvas */}
       <InteractiveCanvas />
 

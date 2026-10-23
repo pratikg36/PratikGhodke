@@ -7,13 +7,18 @@ gsap.registerPlugin(ScrollTrigger);
 
 export const SmoothScroll = ({ children }) => {
   useEffect(() => {
-    // Check if user prefers reduced motion
+    // Check if user prefers reduced motion or is on a touch device
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (prefersReducedMotion) {
+    const isTouchDevice =
+      'ontouchstart' in window ||
+      navigator.maxTouchPoints > 0 ||
+      window.matchMedia('(pointer: coarse)').matches;
+
+    if (prefersReducedMotion || isTouchDevice) {
       return;
     }
 
-    // Initialize Lenis
+    // Initialize Lenis for desktop mouse wheel
     const lenis = new Lenis({
       duration: 1.15,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
@@ -21,7 +26,6 @@ export const SmoothScroll = ({ children }) => {
       gestureOrientation: 'vertical',
       smoothWheel: true,
       wheelMultiplier: 0.9,
-      touchMultiplier: 1.5,
       infinite: false,
     });
 

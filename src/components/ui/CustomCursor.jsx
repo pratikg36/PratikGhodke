@@ -21,8 +21,13 @@ export const CustomCursor = () => {
     const xFollower = gsap.quickTo(follower, 'x', { duration: 0.45, ease: 'power3.out' });
     const yFollower = gsap.quickTo(follower, 'y', { duration: 0.45, ease: 'power3.out' });
 
+    let visible = false;
+
     const handleMouseMove = (e) => {
-      if (!isVisible) setIsVisible(true);
+      if (!visible) {
+        visible = true;
+        setIsVisible(true);
+      }
       xCursor(e.clientX);
       yCursor(e.clientY);
       xFollower(e.clientX);
@@ -30,10 +35,12 @@ export const CustomCursor = () => {
     };
 
     const handleMouseLeave = () => {
+      visible = false;
       setIsVisible(false);
     };
 
     const handleMouseEnter = () => {
+      visible = true;
       setIsVisible(true);
     };
 
@@ -44,10 +51,10 @@ export const CustomCursor = () => {
       setIsHovered(!!isInteractive);
     };
 
-    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('mousemove', handleMouseMove, { passive: true });
     document.addEventListener('mouseleave', handleMouseLeave);
     document.addEventListener('mouseenter', handleMouseEnter);
-    document.addEventListener('mouseover', handleElementHover);
+    document.addEventListener('mouseover', handleElementHover, { passive: true });
 
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
@@ -55,10 +62,10 @@ export const CustomCursor = () => {
       document.removeEventListener('mouseenter', handleMouseEnter);
       document.removeEventListener('mouseover', handleElementHover);
     };
-  }, [isVisible]);
+  }, []);
 
   // If touch device, return null
-  if (typeof window !== 'undefined' && window.matchMedia('(pointer: coarse)').matches) {
+  if (typeof window !== 'undefined' && ('ontouchstart' in window || navigator.maxTouchPoints > 0 || window.matchMedia('(pointer: coarse)').matches)) {
     return null;
   }
 
