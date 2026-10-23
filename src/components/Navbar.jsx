@@ -119,7 +119,7 @@ export const Navbar = ({ onOpenResume }) => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-2.5 rounded-xl bg-white/[0.05] border border-white/[0.1] text-slate-300 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400"
+            className="lg:hidden p-2.5 rounded-xl bg-white/[0.05] border border-white/[0.1] text-slate-300 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 min-h-[44px] min-w-[44px] flex items-center justify-center"
             aria-label="Toggle navigation menu"
             aria-expanded={isMobileMenuOpen}
           >
@@ -130,13 +130,13 @@ export const Navbar = ({ onOpenResume }) => {
 
       {/* Mobile Drawer */}
       {isMobileMenuOpen && (
-        <nav aria-label="Mobile navigation" className="lg:hidden bg-[#080a0f]/98 border-b border-white/[0.07] backdrop-blur-2xl px-6 pt-4 pb-8 mt-3 space-y-3 animate-fade-in">
+        <nav aria-label="Mobile navigation" className="lg:hidden bg-[#080a0f]/98 border-b border-white/[0.07] backdrop-blur-2xl px-6 pt-4 pb-8 mt-3 space-y-1 animate-fade-in">
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
               onClick={() => setIsMobileMenuOpen(false)}
-              className="block px-3 py-2.5 text-sm font-mono tracking-wider uppercase text-slate-300 hover:text-white hover:bg-white/[0.05] rounded-xl transition-colors"
+              className="flex items-center min-h-[44px] px-3 py-2.5 text-sm font-mono tracking-wider uppercase text-slate-300 hover:text-white hover:bg-white/[0.05] rounded-xl transition-colors"
             >
               {link.name}
             </a>
@@ -147,7 +147,7 @@ export const Navbar = ({ onOpenResume }) => {
                 setIsMobileMenuOpen(false);
                 onOpenResume && onOpenResume();
               }}
-              className="w-full text-center px-4 py-3 rounded-xl bg-sky-500/10 border border-sky-500/30 text-sky-300 text-xs font-mono tracking-wider uppercase flex items-center justify-center gap-2"
+              className="w-full text-center px-4 py-3 min-h-[44px] rounded-xl bg-sky-500/10 border border-sky-500/30 text-sky-300 text-xs font-mono tracking-wider uppercase flex items-center justify-center gap-2"
             >
               <FileDown className="w-4 h-4" />
               <span>Inspect Official Resume (PDF)</span>
@@ -155,7 +155,7 @@ export const Navbar = ({ onOpenResume }) => {
             <a
               href="#contact"
               onClick={() => setIsMobileMenuOpen(false)}
-              className="w-full text-center px-4 py-3 rounded-xl bg-gradient-to-r from-sky-500 to-indigo-600 text-white text-xs font-mono tracking-wider uppercase font-bold shadow-lg shadow-sky-500/25"
+              className="w-full text-center px-4 py-3 min-h-[44px] rounded-xl bg-gradient-to-r from-sky-500 to-indigo-600 text-white text-xs font-mono tracking-wider uppercase font-bold shadow-lg shadow-sky-500/25 flex items-center justify-center"
             >
               Get in Touch
             </a>

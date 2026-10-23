@@ -46,7 +46,7 @@ export const Experience = () => {
             {experiences.map((exp, index) => (
               <div
                 key={index}
-                className="group relative rounded-3xl bg-gradient-to-b from-[#111420] to-[#0c0e16] border border-white/[0.07] p-6 sm:p-10 hover:border-sky-500/30 transition-all duration-300 shadow-xl"
+                className="group relative rounded-3xl bg-gradient-to-b from-[#111420] to-[#0c0e16] border border-white/[0.07] p-4 sm:p-8 md:p-10 hover:border-sky-500/30 transition-all duration-300 shadow-xl"
               >
                 <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
                   <div className="flex items-center gap-2">

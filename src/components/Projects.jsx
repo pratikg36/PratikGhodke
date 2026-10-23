@@ -76,7 +76,7 @@ export const Projects = () => {
             return (
               <div
                 key={project.id}
-                className="group relative rounded-3xl bg-gradient-to-b from-[#111420] to-[#0c0e16] border border-white/[0.07] p-6 sm:p-10 lg:p-12 hover:border-sky-500/30 transition-all duration-500 shadow-2xl overflow-hidden"
+                className="group relative rounded-3xl bg-gradient-to-b from-[#111420] to-[#0c0e16] border border-white/[0.07] p-4 sm:p-8 lg:p-12 hover:border-sky-500/30 transition-all duration-500 shadow-2xl overflow-hidden"
               >
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center relative z-10">
                   {/* Left Column: Context, Problem & Decisions */}
@@ -94,7 +94,7 @@ export const Projects = () => {
                       </span>
                     </div>
 
-                    <h3 className="font-display font-bold text-3xl sm:text-4xl text-white mb-3 group-hover:text-sky-300 transition-colors">
+                    <h3 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl text-white mb-3 group-hover:text-sky-300 transition-colors">
                       {project.title}
                     </h3>
 
@@ -127,12 +127,11 @@ export const Projects = () => {
                     </div>
 
                     {/* Action Triggers */}
-                    {/* Action Triggers */}
                     <div className="flex flex-wrap items-center gap-3">
-                      <Magnetic strength={0.2}>
+                      <Magnetic strength={0.2} className="w-full sm:w-auto">
                         <button
                           onClick={() => setSelectedProject(project)}
-                          className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-sky-500 hover:bg-sky-400 text-white font-mono text-xs tracking-wider uppercase font-bold transition-all shadow-md shadow-sky-500/25"
+                          className="w-full sm:w-auto inline-flex items-center justify-center min-h-[44px] gap-2 px-5 sm:px-6 py-3 rounded-xl bg-sky-500 hover:bg-sky-400 text-white font-mono text-xs tracking-wider uppercase font-bold transition-all shadow-md shadow-sky-500/25"
                         >
                           <Layers className="w-4 h-4" />
                           <span>Inspect Full Case Study</span>
@@ -140,12 +139,12 @@ export const Projects = () => {
                       </Magnetic>
 
                       {project.liveUrl && (
-                        <Magnetic strength={0.2}>
+                        <Magnetic strength={0.2} className="w-full sm:w-auto">
                           <a
                             href={project.liveUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 px-4 py-3 rounded-xl bg-transparent hover:bg-white/[0.05] text-slate-300 hover:text-white border border-white/[0.08] font-mono text-xs tracking-wider uppercase transition-colors"
+                            className="w-full sm:w-auto inline-flex items-center justify-center min-h-[44px] gap-2 px-4 py-3 rounded-xl bg-transparent hover:bg-white/[0.05] text-slate-300 hover:text-white border border-white/[0.08] font-mono text-xs tracking-wider uppercase transition-colors"
                           >
                             <span>{project.portalUrl ? 'Live Website' : 'Live System'}</span>
                             <ArrowUpRight className="w-4 h-4" />
@@ -154,12 +153,12 @@ export const Projects = () => {
                       )}
 
                       {project.portalUrl && (
-                        <Magnetic strength={0.2}>
+                        <Magnetic strength={0.2} className="w-full sm:w-auto">
                           <a
                             href={project.portalUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 px-4 py-3 rounded-xl bg-indigo-500/10 hover:bg-indigo-500/20 text-indigo-300 hover:text-white border border-indigo-500/30 font-mono text-xs tracking-wider uppercase transition-colors"
+                            className="w-full sm:w-auto inline-flex items-center justify-center min-h-[44px] gap-2 px-4 py-3 rounded-xl bg-indigo-500/10 hover:bg-indigo-500/20 text-indigo-300 hover:text-white border border-indigo-500/30 font-mono text-xs tracking-wider uppercase transition-colors"
                           >
                             <span>Assess Engine</span>
                             <ArrowUpRight className="w-4 h-4" />
@@ -171,7 +170,7 @@ export const Projects = () => {
 
                   {/* Right Column: Architectural Flow Diagram */}
                   <div className={`lg:col-span-5 ${!isEven ? 'lg:order-1' : ''}`}>
-                    <div className="relative rounded-2xl bg-[#090c14] border border-white/[0.08] p-6 shadow-2xl overflow-hidden group/card hover:border-sky-400/40 transition-colors">
+                    <div className="relative rounded-2xl bg-[#090c14] border border-white/[0.08] p-4 sm:p-6 shadow-2xl overflow-hidden group/card hover:border-sky-400/40 transition-colors">
                       {/* Terminal Header */}
                       <div className="flex items-center justify-between pb-4 mb-4 border-b border-white/[0.08]">
                         <div className="flex items-center gap-2 font-mono text-[11px] text-slate-400">
@@ -207,16 +206,16 @@ export const Projects = () => {
                               <span>POSTGRESQL MULTI-SCHEMA AUDIT</span>
                               <span className="text-sky-400 font-bold">-35% ERRORS</span>
                             </div>
-                            <div className="space-y-1.5 text-[10px]">
-                              <div className="flex items-center justify-between">
+                            <div className="space-y-2 text-[10px]">
+                              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-0.5 sm:gap-2">
                                 <span className="text-slate-400">search_path Query Latency:</span>
                                 <span className="text-emerald-300 font-mono font-bold">640ms → 42ms (-93%)</span>
                               </div>
-                              <div className="flex items-center justify-between">
+                              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-0.5 sm:gap-2">
                                 <span className="text-slate-400">Scale &amp; Coverage:</span>
                                 <span className="text-indigo-300 font-mono">1,300+ Tests | 3,000+ Job Roles</span>
                               </div>
-                              <div className="flex items-center justify-between">
+                              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-0.5 sm:gap-2">
                                 <span className="text-slate-400">RBAC Security Portals:</span>
                                 <span className="text-slate-300">Candidate • Institute • Corporate • Partner</span>
                               </div>
@@ -280,12 +279,12 @@ export const Projects = () => {
                               <span>DATABASE MIGRATION PIPELINE</span>
                               <span className="text-emerald-400">LIQUIBASE 4.x</span>
                             </div>
-                            <div className="text-[10px] text-slate-300 space-y-1">
-                              <div className="flex items-center justify-between">
+                            <div className="text-[10px] text-slate-300 space-y-1.5">
+                              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-0.5 sm:gap-2">
                                 <span className="text-slate-500">Changelog Checksum:</span>
                                 <span className="text-emerald-400 font-bold">VALIDATED &amp; COMMITTED</span>
                               </div>
-                              <div className="flex items-center justify-between">
+                              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-0.5 sm:gap-2">
                                 <span className="text-slate-500">Rollback Safety:</span>
                                 <span className="text-sky-300">Automated Rollback Scripts</span>
                               </div>
@@ -339,14 +338,14 @@ export const Projects = () => {
           role="dialog"
           aria-modal="true"
           aria-labelledby="case-study-title"
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md animate-fade-in"
+          className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/85 backdrop-blur-md animate-fade-in"
         >
-          <div className="relative w-full max-w-4xl bg-[#0c0e16] border border-white/[0.08] rounded-3xl p-6 sm:p-10 shadow-2xl overflow-y-auto max-h-[90vh]">
+          <div className="relative w-full max-w-4xl bg-[#0c0e16] border border-white/[0.08] rounded-3xl p-4 sm:p-8 lg:p-10 shadow-2xl overflow-y-auto max-h-[90vh]">
             {/* Close button */}
             <button
               onClick={() => setSelectedProject(null)}
               aria-label="Close case study details"
-              className="absolute top-6 right-6 p-2 rounded-full bg-white/[0.05] hover:bg-white/[0.1] text-slate-400 hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400"
+              className="absolute top-4 right-4 sm:top-6 sm:right-6 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-full bg-white/[0.05] hover:bg-white/[0.1] text-slate-400 hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400"
             >
               <X className="w-5 h-5" />
             </button>
@@ -361,10 +360,10 @@ export const Projects = () => {
               </span>
             </div>
 
-            <h3 className="font-display font-extrabold text-3xl sm:text-4xl text-white mb-2">
+            <h3 className="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-white mb-2">
               {selectedProject.title} — Deep Dive
             </h3>
-            <p className="text-slate-400 text-sm font-mono mb-6">
+            <p className="text-slate-400 text-xs sm:text-sm font-mono mb-6">
               Category: {selectedProject.category} | Lead Developer: Pratik Ghodke
             </p>
 
@@ -434,10 +433,10 @@ export const Projects = () => {
             </div>
 
             {/* Action Footer */}
-            <div className="flex items-center justify-end gap-3 pt-6 border-t border-white/[0.08]">
+            <div className="flex flex-wrap items-center justify-end gap-3 pt-6 border-t border-white/[0.08]">
               <button
                 onClick={() => setSelectedProject(null)}
-                className="px-5 py-2.5 rounded-xl text-xs font-mono tracking-wider uppercase text-slate-300 hover:text-white bg-white/[0.05] hover:bg-white/[0.1] transition-colors"
+                className="min-h-[44px] px-5 py-2.5 rounded-xl text-xs font-mono tracking-wider uppercase text-slate-300 hover:text-white bg-white/[0.05] hover:bg-white/[0.1] transition-colors"
               >
                 Close
               </button>
@@ -446,7 +445,7 @@ export const Projects = () => {
                   href={selectedProject.liveUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-mono tracking-wider uppercase font-bold text-slate-200 hover:text-white bg-white/[0.06] hover:bg-white/[0.1] border border-white/[0.1] transition-all"
+                  className="min-h-[44px] inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl text-xs font-mono tracking-wider uppercase font-bold text-slate-200 hover:text-white bg-white/[0.06] hover:bg-white/[0.1] border border-white/[0.1] transition-all"
                 >
                   <span>{selectedProject.portalUrl ? 'Live Website' : 'Launch Live Platform'}</span>
                   <ExternalLink className="w-3.5 h-3.5" />
@@ -457,7 +456,7 @@ export const Projects = () => {
                   href={selectedProject.portalUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl text-xs font-mono tracking-wider uppercase font-bold text-white bg-gradient-to-r from-sky-500 to-indigo-600 hover:from-sky-400 hover:to-indigo-500 shadow-lg shadow-sky-500/25 transition-all"
+                  className="min-h-[44px] inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl text-xs font-mono tracking-wider uppercase font-bold text-white bg-gradient-to-r from-sky-500 to-indigo-600 hover:from-sky-400 hover:to-indigo-500 shadow-lg shadow-sky-500/25 transition-all"
                 >
                   <span>Assessment Engine</span>
                   <ExternalLink className="w-4 h-4" />

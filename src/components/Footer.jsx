@@ -18,21 +18,21 @@ export const Footer = () => {
             <div className="w-8 h-8 rounded-lg bg-sky-500/10 border border-sky-500/20 flex items-center justify-center text-sky-400">
               <Terminal className="w-4 h-4" />
             </div>
-            <div>
+            <div className="flex flex-col sm:flex-row sm:items-center">
               <span className="font-display font-bold text-white tracking-wide text-sm">
                 PRATIK GHODKE
               </span>
-              <span className="text-slate-400 ml-2">Software Engineer &amp; Mobile Lead</span>
+              <span className="text-slate-400 sm:ml-2 text-xs">Software Engineer &amp; Mobile Lead</span>
             </div>
           </div>
 
           {/* Social Quick Links */}
-          <div className="flex items-center gap-4">
+          <div className="flex flex-wrap items-center justify-center gap-4 py-1">
             <a
               href={personal.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-slate-400 hover:text-white transition-colors"
+              className="text-slate-400 hover:text-white transition-colors py-2 px-1 min-h-[44px] flex items-center"
               aria-label="GitHub Profile"
             >
               GitHub
@@ -42,7 +42,7 @@ export const Footer = () => {
               href={personal.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-slate-400 hover:text-white transition-colors"
+              className="text-slate-400 hover:text-white transition-colors py-2 px-1 min-h-[44px] flex items-center"
               aria-label="LinkedIn Profile"
             >
               LinkedIn
@@ -50,7 +50,7 @@ export const Footer = () => {
             <span>•</span>
             <a
               href={`mailto:${personal.email}`}
-              className="text-slate-400 hover:text-white transition-colors"
+              className="text-slate-400 hover:text-white transition-colors py-2 px-1 min-h-[44px] flex items-center"
               aria-label="Email"
             >
               Email
@@ -60,7 +60,7 @@ export const Footer = () => {
           {/* Back to top button */}
           <button
             onClick={scrollToTop}
-            className="flex items-center gap-2 px-4 py-2 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] text-slate-300 hover:text-white transition-colors border border-white/[0.08] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400"
+            className="flex items-center justify-center gap-2 px-4 py-2.5 min-h-[44px] rounded-xl bg-white/[0.04] hover:bg-white/[0.08] text-slate-300 hover:text-white transition-colors border border-white/[0.08] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400"
             aria-label="Scroll back to top"
           >
             <span>Back to Top</span>

@@ -43,7 +43,7 @@ export const SystemArchitectureExplorer = ({ onSelectProject }) => {
         {/* Interactive Architecture Workspace */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           {/* Left: Architecture Flow Chart / Map */}
-          <div className="lg:col-span-7 rounded-3xl bg-gradient-to-b from-[#111420] to-[#0c0e16] border border-white/[0.07] p-6 sm:p-8 shadow-2xl relative overflow-hidden">
+          <div className="lg:col-span-7 rounded-3xl bg-gradient-to-b from-[#111420] to-[#0c0e16] border border-white/[0.07] p-4 sm:p-6 lg:p-8 shadow-2xl relative overflow-hidden">
             <div className="flex items-center justify-between pb-4 mb-6 border-b border-white/[0.08]">
               <span className="font-mono text-xs text-slate-400 tracking-wider uppercase">
                 SYSTEM PIPELINE TOPOLOGY
@@ -55,7 +55,7 @@ export const SystemArchitectureExplorer = ({ onSelectProject }) => {
             </div>
 
             {/* Nodes Stack */}
-            <div className="space-y-4" role="tablist" aria-label="System Subsystems">
+            <div className="space-y-3 sm:space-y-4" role="tablist" aria-label="System Subsystems">
               {systemArchitecture.nodes.map((node, index) => {
                 const Icon = iconMap[node.id] || Server;
                 const isActive = activeNodeId === node.id;
@@ -67,7 +67,7 @@ export const SystemArchitectureExplorer = ({ onSelectProject }) => {
                     aria-selected={isActive}
                     aria-controls="subsystem-inspector"
                     onClick={() => setActiveNodeId(node.id)}
-                    className={`w-full text-left p-4 sm:p-5 rounded-2xl border transition-all duration-300 flex items-center justify-between group relative overflow-hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 ${
+                    className={`w-full text-left p-3.5 sm:p-5 rounded-2xl border transition-all duration-300 flex items-center justify-between group relative overflow-hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 gap-3 min-h-[44px] ${
                       isActive
                         ? 'bg-gradient-to-r from-sky-500/15 via-indigo-500/10 to-transparent border-sky-400/50 shadow-lg shadow-sky-500/10'
                         : 'bg-white/[0.02] border-white/[0.06] hover:border-white/[0.15] hover:bg-white/[0.04]'
@@ -78,9 +78,9 @@ export const SystemArchitectureExplorer = ({ onSelectProject }) => {
                       <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-sky-400 to-indigo-500" />
                     )}
 
-                    <div className="flex items-center gap-4">
+                    <div className="flex items-center gap-3 sm:gap-4 min-w-0 flex-1">
                       <div
-                        className={`w-11 h-11 rounded-xl flex items-center justify-center transition-colors ${
+                        className={`w-10 h-10 sm:w-11 sm:h-11 shrink-0 rounded-xl flex items-center justify-center transition-colors ${
                           isActive
                             ? 'bg-sky-500 text-white shadow-md shadow-sky-500/30'
                             : 'bg-white/[0.05] text-slate-400 group-hover:text-white'
@@ -88,20 +88,20 @@ export const SystemArchitectureExplorer = ({ onSelectProject }) => {
                       >
                         <Icon className="w-5 h-5" />
                       </div>
-                      <div>
+                      <div className="min-w-0 flex-1">
                         <div className="font-mono text-[10px] text-sky-400 uppercase tracking-widest">
                           {node.tier}
                         </div>
-                        <div className="font-display font-bold text-base sm:text-lg text-white">
+                        <div className="font-display font-bold text-sm sm:text-lg text-white truncate">
                           {node.title}
                         </div>
-                        <div className="font-mono text-xs text-slate-400 mt-0.5">
+                        <div className="font-mono text-xs text-slate-400 mt-0.5 truncate sm:overflow-visible sm:whitespace-normal">
                           {node.tech}
                         </div>
                       </div>
                     </div>
 
-                    <div className="hidden sm:flex items-center gap-2">
+                    <div className="hidden sm:flex items-center gap-2 shrink-0">
                       <span className="font-mono text-xs text-slate-500 group-hover:text-slate-300">
                         {node.projectTitle.split('/')[0]}
                       </span>
@@ -113,7 +113,7 @@ export const SystemArchitectureExplorer = ({ onSelectProject }) => {
             </div>
 
             {/* Connection Signal Footer */}
-            <div className="mt-6 pt-4 border-t border-white/[0.06] flex items-center justify-between text-[11px] font-mono text-slate-500">
+            <div className="mt-6 pt-4 border-t border-white/[0.06] flex flex-wrap items-center justify-between gap-2 text-[10px] sm:text-[11px] font-mono text-slate-500">
               <span>PROTOCOL: JSON REST / SSE</span>
               <span>INTEGRATION: DTOs &amp; EVENTS</span>
             </div>
@@ -124,7 +124,7 @@ export const SystemArchitectureExplorer = ({ onSelectProject }) => {
             id="subsystem-inspector"
             role="tabpanel"
             aria-labelledby={`tab-${activeNode.id}`}
-            className="lg:col-span-5 rounded-3xl bg-gradient-to-b from-[#141826] to-[#0c0e16] border border-sky-500/25 p-6 sm:p-8 shadow-2xl relative sticky top-28"
+            className="lg:col-span-5 rounded-3xl bg-gradient-to-b from-[#141826] to-[#0c0e16] border border-sky-500/25 p-4 sm:p-6 lg:p-8 shadow-2xl relative sticky top-28"
           >
             {/* Header */}
             <div className="flex items-center justify-between pb-4 mb-6 border-b border-white/[0.08]">
@@ -141,13 +141,13 @@ export const SystemArchitectureExplorer = ({ onSelectProject }) => {
               </span>
             </div>
 
-            <h3 className="font-display font-bold text-2xl text-white mb-2">
+            <h3 className="font-display font-bold text-xl sm:text-2xl text-white mb-2">
               {activeNode.title}
             </h3>
 
-            <div className="p-3.5 rounded-xl bg-white/[0.02] border border-white/[0.05] font-mono text-xs text-slate-300 space-y-1.5 mb-6">
-              <div><span className="text-slate-500">Technologies:</span> <span className="text-sky-300">{activeNode.tech}</span></div>
-              <div><span className="text-slate-500">Protocols:</span> <span className="text-indigo-300">{activeNode.protocols}</span></div>
+            <div className="p-3.5 rounded-xl bg-white/[0.02] border border-white/[0.05] font-mono text-xs text-slate-300 space-y-1.5 mb-6 break-words">
+              <div className="break-words"><span className="text-slate-500">Technologies:</span> <span className="text-sky-300 break-words">{activeNode.tech}</span></div>
+              <div className="break-words"><span className="text-slate-500">Protocols:</span> <span className="text-indigo-300 break-words">{activeNode.protocols}</span></div>
             </div>
 
             {/* Operational Role */}
@@ -155,7 +155,7 @@ export const SystemArchitectureExplorer = ({ onSelectProject }) => {
               <h4 className="font-mono text-xs uppercase tracking-wider text-slate-400 mb-2">
                 Operational Responsibility
               </h4>
-              <p className="text-sm text-slate-300 leading-relaxed font-sans">
+              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-sans">
                 {activeNode.role}
               </p>
             </div>
@@ -180,10 +180,10 @@ export const SystemArchitectureExplorer = ({ onSelectProject }) => {
               <a
                 href="#projects"
                 onClick={() => onSelectProject && onSelectProject(activeNode.associatedProject)}
-                className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-sky-500 hover:bg-sky-400 text-white font-mono text-xs tracking-wider uppercase font-bold transition-all shadow-md shadow-sky-500/25"
+                className="w-full inline-flex items-center justify-center min-h-[44px] gap-2 py-3 px-3 sm:px-4 rounded-xl bg-sky-500 hover:bg-sky-400 text-white font-mono text-xs tracking-wider uppercase font-bold transition-all shadow-md shadow-sky-500/25 text-center"
               >
-                <span>View Associated Case Study ({activeNode.projectTitle.split('/')[0].trim()})</span>
-                <ExternalLink className="w-3.5 h-3.5" />
+                <span>View Case Study ({activeNode.projectTitle.split('/')[0].trim()})</span>
+                <ExternalLink className="w-3.5 h-3.5 shrink-0" />
               </a>
             </div>
           </div>

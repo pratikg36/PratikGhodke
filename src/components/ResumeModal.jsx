@@ -33,27 +33,28 @@ export const ResumeModal = ({ isOpen, onClose }) => {
     >
       <div className="relative w-full max-w-4xl bg-white text-slate-900 rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[92vh]">
         {/* Top Header Bar */}
-        <div className="bg-[#0f172a] text-white px-6 py-4 flex items-center justify-between border-b border-slate-800">
-          <div className="flex items-center gap-3">
-            <span className="font-bold text-lg text-white">Pratik Ghodke — Resume Preview</span>
-            <span className="hidden sm:inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
+        <div className="bg-[#0f172a] text-white px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between border-b border-slate-800 gap-2">
+          <div className="flex items-center gap-3 min-w-0">
+            <span className="font-bold text-sm sm:text-base md:text-lg text-white truncate">Pratik Ghodke — Resume Preview</span>
+            <span className="hidden sm:inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 shrink-0">
               Updated: 2026
             </span>
           </div>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 shrink-0">
             <a
               href={pdfUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-sky-500 hover:bg-sky-400 text-white transition-colors shadow-sm"
+              className="inline-flex items-center gap-1.5 px-3 py-2 min-h-[40px] rounded-lg text-xs font-semibold bg-sky-500 hover:bg-sky-400 text-white transition-colors shadow-sm"
             >
               <FileDown className="w-3.5 h-3.5" />
-              <span>Download PDF</span>
+              <span className="hidden sm:inline">Download PDF</span>
+              <span className="sm:hidden">PDF</span>
             </a>
             <button
               onClick={onClose}
-              className="p-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-slate-300 hover:text-white transition-colors"
+              className="p-2 min-h-[40px] min-w-[40px] flex items-center justify-center rounded-lg bg-white/10 hover:bg-white/20 text-slate-300 hover:text-white transition-colors"
               aria-label="Close modal"
             >
               <X className="w-5 h-5" />
@@ -62,22 +63,22 @@ export const ResumeModal = ({ isOpen, onClose }) => {
         </div>
 
         {/* Scrollable Document Body */}
-        <div className="p-6 sm:p-10 overflow-y-auto space-y-6 text-sm leading-relaxed font-sans bg-white selection:bg-sky-100 selection:text-sky-900">
+        <div className="p-4 sm:p-8 lg:p-10 overflow-y-auto space-y-6 text-sm leading-relaxed font-sans bg-white selection:bg-sky-100 selection:text-sky-900">
           {/* Header */}
           <div className="text-center border-b border-slate-200 pb-5">
-            <h1 className="text-3xl font-extrabold uppercase tracking-tight text-slate-900 mb-1">
+            <h1 className="text-2xl sm:text-3xl font-extrabold uppercase tracking-tight text-slate-900 mb-1">
               Pratik Ghodke
             </h1>
-            <div className="text-base font-semibold text-slate-800 mb-2">
+            <div className="text-sm sm:text-base font-semibold text-slate-800 mb-2">
               Software Engineer | Mobile &amp; Full-Stack Developer
             </div>
             <div className="text-xs text-slate-600 flex flex-wrap justify-center gap-x-3 gap-y-1">
               <span>Pune, Maharashtra, India</span> •
-              <a href="mailto:pratikghodke03@gmail.com" className="text-blue-600 hover:underline">pratikghodke03@gmail.com</a> •
-              <span>+91 9762878326</span> •
-              <a href="https://linkedin.com/in/pratikghodke" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">linkedin.com/in/pratikghodke</a> •
-              <a href="https://github.com/pratikg36" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">github.com/pratikg36</a> •
-              <a href="https://pratikg36.github.io/PratikGhodke/" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline font-semibold">Portfolio: pratikg36.github.io/PratikGhodke</a>
+              <a href="mailto:pratikghodke03@gmail.com" className="text-blue-600 hover:underline break-all sm:break-normal">pratikghodke03@gmail.com</a> •
+              <span className="whitespace-nowrap">+91 9762878326</span> •
+              <a href="https://linkedin.com/in/pratikghodke" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline break-all sm:break-normal">linkedin.com/in/pratikghodke</a> •
+              <a href="https://github.com/pratikg36" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline break-all sm:break-normal">github.com/pratikg36</a> •
+              <a href="https://pratikg36.github.io/PratikGhodke/" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline font-semibold break-all sm:break-normal">Portfolio: pratikg36.github.io/PratikGhodke</a>
             </div>
           </div>
 
@@ -186,12 +187,12 @@ export const ResumeModal = ({ isOpen, onClose }) => {
             <h2 className="text-xs font-bold uppercase tracking-wider text-slate-900 border-b border-slate-900 pb-1 mb-2">
               Education &amp; Certifications
             </h2>
-            <div className="text-xs space-y-1 text-slate-800">
-              <div className="flex justify-between">
+            <div className="text-xs space-y-2 text-slate-800">
+              <div className="flex flex-col sm:flex-row sm:justify-between gap-0.5">
                 <span><strong>Master of Computer Science (M.Sc.)</strong> — Savitribai Phule Pune University</span>
                 <span className="italic text-slate-600">CGPA: 7.60 | 2022 – 2024</span>
               </div>
-              <div className="flex justify-between">
+              <div className="flex flex-col sm:flex-row sm:justify-between gap-0.5">
                 <span><strong>Bachelor of Computer Science (B.Sc.)</strong> — Savitribai Phule Pune University</span>
                 <span className="italic text-slate-600">Percentage: 83.22% | 2018 – 2021</span>
               </div>
@@ -203,14 +204,14 @@ export const ResumeModal = ({ isOpen, onClose }) => {
         </div>
 
         {/* Modal Footer */}
-        <div className="bg-slate-50 px-6 py-3 border-t border-slate-200 flex items-center justify-between">
-          <span className="text-xs text-slate-500">
+        <div className="bg-slate-50 px-4 sm:px-6 py-3 border-t border-slate-200 flex flex-wrap items-center justify-between gap-2">
+          <span className="text-[11px] sm:text-xs text-slate-500">
             Matching official LaTeX version (<code className="text-slate-700">Pratik_Ghodke_Resume.tex</code>)
           </span>
           <div className="flex gap-2">
             <button
               onClick={onClose}
-              className="px-4 py-1.5 rounded-lg text-xs font-medium bg-slate-200 hover:bg-slate-300 text-slate-700 transition-colors"
+              className="px-4 py-2 min-h-[38px] rounded-lg text-xs font-medium bg-slate-200 hover:bg-slate-300 text-slate-700 transition-colors"
             >
               Close
             </button>
@@ -218,7 +219,7 @@ export const ResumeModal = ({ isOpen, onClose }) => {
               href={pdfUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-1.5 rounded-lg text-xs font-semibold bg-sky-600 hover:bg-sky-500 text-white transition-colors"
+              className="px-4 py-2 min-h-[38px] rounded-lg text-xs font-semibold bg-sky-600 hover:bg-sky-500 text-white transition-colors"
             >
               Open PDF
             </a>

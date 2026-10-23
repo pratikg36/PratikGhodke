@@ -70,7 +70,7 @@ export const Skills = () => {
               <button
                 key={opt.id}
                 onClick={() => setSelectedProjectFilter(opt.id)}
-                className={`px-3 py-1 rounded-lg font-mono text-xs transition-colors ${
+                className={`px-3 py-1.5 min-h-[36px] rounded-lg font-mono text-xs flex items-center transition-colors ${
                   selectedProjectFilter === opt.id
                     ? 'bg-sky-500 text-white font-bold shadow-sm'
                     : 'bg-white/[0.04] text-slate-400 hover:text-white'
@@ -90,13 +90,13 @@ export const Skills = () => {
               <button
                 key={idx}
                 onClick={() => setSelectedCategory(idx)}
-                className={`flex items-center gap-2.5 px-5 py-3 rounded-2xl font-mono text-xs tracking-wider uppercase transition-all duration-300 ${
+                className={`flex items-center gap-2.5 px-4 sm:px-5 py-2.5 sm:py-3 min-h-[44px] rounded-2xl font-mono text-xs tracking-wider uppercase transition-all duration-300 ${
                   selectedCategory === idx
                     ? 'bg-sky-500 text-white font-bold shadow-lg shadow-sky-500/25 border border-sky-400'
                     : 'bg-[#111420] text-slate-400 hover:text-white border border-white/[0.07] hover:border-white/[0.15]'
                 }`}
               >
-                <Icon className="w-4 h-4" />
+                <Icon className="w-4 h-4 shrink-0" />
                 <span>{cat.name}</span>
               </button>
             );
@@ -104,13 +104,13 @@ export const Skills = () => {
         </div>
 
         {/* Selected Category Interactive Grid */}
-        <div className="rounded-3xl bg-gradient-to-b from-[#111420] to-[#0c0e16] border border-white/[0.07] p-6 sm:p-10 mb-16 shadow-2xl">
-          <div className="flex flex-wrap items-center justify-between gap-4 pb-6 mb-8 border-b border-white/[0.08]">
+        <div className="rounded-3xl bg-gradient-to-b from-[#111420] to-[#0c0e16] border border-white/[0.07] p-4 sm:p-6 lg:p-10 mb-16 shadow-2xl">
+          <div className="flex flex-wrap items-center justify-between gap-3 pb-6 mb-8 border-b border-white/[0.08]">
             <div className="flex items-center gap-3">
               <span className="font-mono text-xs text-sky-400 uppercase tracking-widest">
                 CATEGORY 0{selectedCategory + 1} //
               </span>
-              <h3 className="font-display font-bold text-2xl text-white">
+              <h3 className="font-display font-bold text-xl sm:text-2xl text-white">
                 {currentCategory.name}
               </h3>
             </div>
@@ -178,22 +178,22 @@ export const Skills = () => {
         </div>
 
         {/* Academic Credentials & Certifications */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8">
           {/* Education */}
-          <div className="lg:col-span-7 rounded-3xl bg-[#0c0e16] border border-white/[0.07] p-6 sm:p-8">
+          <div className="lg:col-span-7 rounded-3xl bg-[#0c0e16] border border-white/[0.07] p-4 sm:p-6 lg:p-8">
             <div className="flex items-center gap-3 mb-6 pb-4 border-b border-white/[0.06]">
-              <div className="w-9 h-9 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400">
+              <div className="w-9 h-9 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 shrink-0">
                 <GraduationCap className="w-5 h-5" />
               </div>
-              <h4 className="font-display font-bold text-xl text-white">Academic Education</h4>
+              <h4 className="font-display font-bold text-lg sm:text-xl text-white">Academic Education</h4>
             </div>
 
             <div className="space-y-6">
               {education.map((edu, idx) => (
                 <div key={idx} className="pb-4 last:pb-0 border-b last:border-0 border-white/[0.06]">
-                  <div className="font-display font-bold text-base text-white">{edu.degree}</div>
+                  <div className="font-display font-bold text-sm sm:text-base text-white">{edu.degree}</div>
                   <div className="font-mono text-xs text-sky-400 mt-1">{edu.institution}</div>
-                  <div className="flex items-center justify-between font-mono text-xs text-slate-400 mt-2">
+                  <div className="flex flex-wrap items-center justify-between gap-1 font-mono text-xs text-slate-400 mt-2">
                     <span>{edu.period}</span>
                     <span className="text-white font-bold">{edu.score}</span>
                   </div>
@@ -203,12 +203,12 @@ export const Skills = () => {
           </div>
 
           {/* Certifications */}
-          <div className="lg:col-span-5 rounded-3xl bg-[#0c0e16] border border-white/[0.07] p-6 sm:p-8">
+          <div className="lg:col-span-5 rounded-3xl bg-[#0c0e16] border border-white/[0.07] p-4 sm:p-6 lg:p-8">
             <div className="flex items-center gap-3 mb-6 pb-4 border-b border-white/[0.06]">
-              <div className="w-9 h-9 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
+              <div className="w-9 h-9 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 shrink-0">
                 <Award className="w-5 h-5" />
               </div>
-              <h4 className="font-display font-bold text-xl text-white">Industry Certifications</h4>
+              <h4 className="font-display font-bold text-lg sm:text-xl text-white">Industry Certifications</h4>
             </div>
 
             <div className="space-y-6">

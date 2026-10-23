@@ -35,18 +35,18 @@ export const Hero = ({ onOpenResume }) => {
       {/* Hero Content Container */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full flex-grow flex flex-col justify-center">
         {/* Top Meta Bar */}
-        <div className="flex flex-wrap items-center justify-between gap-4 mb-8">
-          <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-[#111420]/85 border border-white/[0.07] backdrop-blur-xl shadow-lg">
-            <span className="relative flex h-2 w-2">
+        <div className="flex flex-wrap items-center justify-between gap-3 sm:gap-4 mb-8">
+          <div className="inline-flex items-center gap-2.5 sm:gap-3 px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-full bg-[#111420]/85 border border-white/[0.07] backdrop-blur-xl shadow-lg max-w-full">
+            <span className="relative flex h-2 w-2 shrink-0">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
               <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
             </span>
-            <span className="font-mono text-xs text-slate-300 font-medium">
+            <span className="font-mono text-[11px] sm:text-xs text-slate-300 font-medium truncate">
               AVAILABLE FOR HIRE <span className="text-slate-500">•</span> PUNE {time ? `${time} IST` : '17:30 IST'}
             </span>
           </div>
 
-          <div className="font-mono text-xs text-sky-400 tracking-wider uppercase border border-sky-500/20 px-3.5 py-1.5 rounded-full bg-sky-500/10">
+          <div className="font-mono text-[10px] sm:text-xs text-sky-400 tracking-wider uppercase border border-sky-500/20 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-sky-500/10">
             SOFTWARE ENGINEER &amp; MOBILE LEAD
           </div>
         </div>
@@ -56,11 +56,11 @@ export const Hero = ({ onOpenResume }) => {
           {/* Left Column: Typography & Intent */}
           <div className="lg:col-span-7 space-y-6">
             <div className="font-mono text-xs sm:text-sm text-sky-400 tracking-widest uppercase flex items-center gap-2">
-              <Terminal className="w-3.5 h-3.5" />
+              <Terminal className="w-3.5 h-3.5 shrink-0" />
               <span>FULL-STACK ARCHITECTURE &amp; MOBILE SYSTEMS</span>
             </div>
 
-            <h1 className="font-display font-extrabold text-5xl sm:text-7xl lg:text-8xl tracking-tight text-white leading-[0.92] uppercase select-none">
+            <h1 className="font-display font-extrabold text-4xl sm:text-7xl lg:text-8xl tracking-tight text-white leading-[0.95] sm:leading-[0.92] uppercase select-none break-words">
               PRATIK <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-300 via-sky-400 to-indigo-400">
                 GHODKE
@@ -76,21 +76,21 @@ export const Hero = ({ onOpenResume }) => {
             </p>
 
             {/* Magnetic CTA Group */}
-            <div className="flex flex-wrap items-center gap-4 pt-4">
-              <Magnetic strength={0.25}>
+            <div className="flex flex-wrap items-center gap-3 sm:gap-4 pt-4">
+              <Magnetic strength={0.25} className="w-full sm:w-auto">
                 <a
                   href="#projects"
-                  className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-white text-[#080a0f] font-display font-bold text-sm tracking-wide uppercase shadow-2xl shadow-white/10 hover:bg-slate-200 transition-all hover:scale-105"
+                  className="w-full sm:w-auto inline-flex items-center justify-center min-h-[44px] gap-3 px-6 sm:px-8 py-3.5 sm:py-4 rounded-full bg-white text-[#080a0f] font-display font-bold text-xs sm:text-sm tracking-wide uppercase shadow-2xl shadow-white/10 hover:bg-slate-200 transition-all hover:scale-105"
                 >
                   <span>Explore Case Studies</span>
                   <ArrowDownRight className="w-4 h-4" />
                 </a>
               </Magnetic>
 
-              <Magnetic strength={0.25}>
+              <Magnetic strength={0.25} className="w-full sm:w-auto">
                 <button
                   onClick={onOpenResume}
-                  className="inline-flex items-center gap-2.5 px-7 py-4 rounded-full bg-[#111420] hover:bg-[#161a29] text-white border border-white/[0.08] hover:border-sky-400/40 font-mono text-xs tracking-wider uppercase transition-all shadow-lg"
+                  className="w-full sm:w-auto inline-flex items-center justify-center min-h-[44px] gap-2.5 px-6 sm:px-7 py-3.5 sm:py-4 rounded-full bg-[#111420] hover:bg-[#161a29] text-white border border-white/[0.08] hover:border-sky-400/40 font-mono text-xs tracking-wider uppercase transition-all shadow-lg"
                 >
                   <FileDown className="w-4 h-4 text-sky-400" />
                   <span>Inspect Official Resume</span>
@@ -199,13 +199,13 @@ export const Hero = ({ onOpenResume }) => {
       </div>
 
       {/* Bottom Scroll Cue & Meta */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10 pt-8 flex items-center justify-between border-t border-white/[0.06]">
-        <div className="font-mono text-[11px] text-slate-400 uppercase tracking-widest">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-2 border-t border-white/[0.06] text-center sm:text-left">
+        <div className="font-mono text-[10px] sm:text-[11px] text-slate-400 uppercase tracking-widest">
           LEAD DEVELOPER @ NEOPACE INFOTECH LLP
         </div>
         <a
           href="#architecture"
-          className="flex items-center gap-2 font-mono text-[11px] text-slate-400 hover:text-sky-400 transition-colors tracking-widest uppercase group"
+          className="flex items-center gap-2 font-mono text-[10px] sm:text-[11px] text-slate-400 hover:text-sky-400 transition-colors tracking-widest uppercase group py-1"
         >
           <span>SYSTEM ARCHITECTURE BELOW</span>
           <span className="w-1.5 h-1.5 rounded-full bg-sky-400 group-hover:translate-y-1 transition-transform" />
