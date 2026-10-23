@@ -1,6 +1,6 @@
 # Pratik Ghodke — Software Engineer Portfolio & Resume
 
-[![Live Demo](https://img.shields.io/badge/Live_Portfolio-GitHub_Pages-0ea5e9?style=for-the-badge&logo=github)](https://pratikg36.github.io/Resume-/)
+[![Live Demo](https://img.shields.io/badge/Live_Portfolio-GitHub_Pages-0ea5e9?style=for-the-badge&logo=github)](https://pratikg36.github.io/PratikGhodke/)
 [![Resume PDF](https://img.shields.io/badge/Resume-Download_PDF-10b981?style=for-the-badge&logo=adobe-acrobat-reader)](./public/Pratik_Ghodke_Resume.pdf)
 [![Java 21](https://img.shields.io/badge/Java-21-orange?style=for-the-badge&logo=openjdk)](https://openjdk.org/)
 [![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.x-green?style=for-the-badge&logo=springboot)](https://spring.io/projects/spring-boot)
@@ -41,8 +41,8 @@ A high-performance, dark-themed engineering portfolio and verified technical cre
 
 ```bash
 # Clone repository
-git clone https://github.com/pratikg36/Resume-.git
-cd Resume-
+git clone https://github.com/pratikg36/PratikGhodke.git
+cd PratikGhodke
 
 # Install dependencies
 npm install
