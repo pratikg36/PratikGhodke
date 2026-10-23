@@ -1,0 +1,180 @@
+%-------------------------
+% Resume in LaTeX - ATS Compliant & Modern Professional Format
+% Author: Pratik Ghodke
+% License: MIT
+%-------------------------
+
+\documentclass[letterpaper,10.8pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{geometry}
+
+\geometry{
+    letterpaper,
+    top=0.55in,
+    bottom=0.55in,
+    left=0.6in,
+    right=0.6in
+}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% URL style
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-5pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-4pt}]
+
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-6pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.98\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-6pt}
+}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in, label=\textbullet]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%
+%-------------------------------------------
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    {\Huge \scshape Pratik Ghodke} \\ \vspace{2pt}
+    \textbf{Software Engineer | Mobile \& Full-Stack Developer} \\ \vspace{3pt}
+    \small Pune, Maharashtra, India \ $|$ \ 
+    \href{mailto:pratikghodke03@gmail.com}{\underline{pratikghodke03@gmail.com}} \ $|$ \ 
+    +91 9762878326 \\ \vspace{1pt}
+    \href{https://linkedin.com/in/pratikghodke}{\underline{linkedin.com/in/pratikghodke}} \ $|$ \ 
+    \href{https://github.com/PratikNeopace}{\underline{github.com/PratikNeopace}} \ $|$ \ 
+    \href{https://pratik-portfolio.vercel.app}{\underline{pratik-portfolio.vercel.app}}
+\end{center}
+
+%-----------PROFESSIONAL SUMMARY-----------
+\section{Professional Summary}
+\small{
+Software Engineer with extensive experience in cross-platform mobile engineering (\textbf{Flutter/Dart}) and enterprise backend microservices (\textbf{Java, Spring Boot, PostgreSQL}). Proven track record leading full-stack application development from architecture through production release on the \textbf{Google Play Console} and Linux environments. Specialized in building modular state architectures using \textbf{Riverpod}, resilient networking with \textbf{Dio}, secure authentication with \textbf{JWT/RBAC}, database migrations via \textbf{Liquibase}, and scalable RESTful backend APIs.
+}
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.0in, label={}]
+    \small{\item{
+     \textbf{Languages:}{ Dart, Java (Java 21/17), TypeScript, JavaScript, SQL, HTML5, CSS3} \\ \vspace{1pt}
+     \textbf{Mobile \& Frontend:}{ Flutter, Riverpod (StateNotifier, AsyncNotifier), Dio (Interceptors), Material Design 3, OpenStreetMap, Geolocation, Vite, React} \\ \vspace{1pt}
+     \textbf{Backend \& Microservices:}{ Spring Boot 3.x, Spring MVC, Spring Security, Spring Data JPA, Hibernate ORM, RESTful APIs, Liquibase, DTO Validation} \\ \vspace{1pt}
+     \textbf{Security \& Real-Time:}{ JWT Authentication, Role-Based Access Control (RBAC), OTP Verification, Server-Sent Events (SSE), WebSockets} \\ \vspace{1pt}
+     \textbf{Databases \& Cloud:}{ PostgreSQL, MySQL, MongoDB, Docker, AWS (EC2, S3), Linux Server Administration, Nginx} \\ \vspace{1pt}
+     \textbf{DevOps \& Tooling:}{ Google Play Console (AAB / Releases), Git, GitHub, Maven, Gradle, Postman, Swagger/OpenAPI, IntelliJ IDEA, VS Code}
+    }}
+\end{itemize}
+
+%-----------EXPERIENCE-----------
+\section{Professional Experience}
+\resumeSubHeadingListStart
+
+    \resumeSubheading
+      {NeoPace InfoTech LLP}{Pune, India}
+      {Software Engineer (Full-Stack \& Mobile Lead)}{Feb 2026 -- Present}
+      \resumeItemListStart
+        \resumeItem{\textbf{Full-Stack Engineering \& Leadership:} Led mobile and backend development across commercial client applications, architecting robust full-stack architectures in \textbf{Flutter, Dart, Java Spring Boot}, and \textbf{PostgreSQL}.}
+        \resumeItem{\textbf{Neo Parlour (Salon \& Appointment SaaS):} Engineered a multi-role appointment scheduling engine handling customer booking flows, salon holiday schedules, date/time slot validation, and service status tracking; designed Spring Boot REST APIs with DTO validation and enums for dynamic product and status management.}
+        \resumeItem{\textbf{NeoCloudBites (Cloud Kitchen \& Delivery App):} Developed full cross-platform Flutter application featuring dynamic menu browsing, cart state management, and an interactive \textbf{OpenStreetMap location picker} with reverse geocoding for precise delivery address selection.}
+        \resumeItem{\textbf{Resilient Networking \& Feature Flags:} Implemented a modular \textbf{Dio} networking layer with custom interceptors for automated JWT authorization, error normalization, and remote feature flags for controlled rollout of features.}
+        \resumeItem{\textbf{Release Management \& Google Play Compliance:} Managed end-to-end mobile release pipelines, packaging signed Android App Bundles (\textbf{AAB}), meeting Google Play compliance standards, and deploying to the \textbf{Google Play Console}.}
+        \resumeItem{\textbf{NeoSowInfra (Enterprise Web \& Platform):} Built secure Spring Boot backend services with \textbf{Liquibase} database migrations, custom PostgreSQL schemas, and granular RBAC authorization; deployed full-stack Vite frontend and APIs to production Linux servers.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Proser Digital Solutions}{Pune, India}
+      {Software Developer}{Jul 2025 -- Jan 2026}
+      \resumeItemListStart
+        \resumeItem{\textbf{Mobile App Development:} Built responsive, cross-platform mobile and web applications using \textbf{Flutter and Dart}, interfacing with complex backend REST APIs.}
+        \resumeItem{\textbf{State Management:} Implemented client-side state architecture using \textbf{Riverpod}, establishing clean separation of concerns between business logic and UI layers and authoring reusable widget components.}
+        \resumeItem{\textbf{Performance \& Collaboration:} Optimized cross-device rendering performance, reduced UI frame drops, and managed team version control workflows using \textbf{Git and GitHub}.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Tayan Solution}{Pune, India}
+      {Software Developer Intern}{Feb 2025 -- Jul 2025}
+      \resumeItemListStart
+        \resumeItem{\textbf{LMS Backend Optimization:} Improved Learning Management System (LMS) execution performance by 20\% through database query refactoring and architecture optimization using \textbf{JSP, Servlets, and JDBC}.}
+      \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Key Software Projects}
+\resumeSubHeadingListStart
+
+    \resumeProjectHeading
+      {\textbf{NeaLife -- Online Psychometric \& Psychological Assessment Platform} $|$ \emph{Java 21, Spring Boot 3, Spring Security 6, PostgreSQL, AWS, Docker}}{}
+      \resumeItemListStart
+        \resumeItem{\textbf{Lead Backend Systems:} Solely architected and delivered the enterprise backend in \textbf{Java 21 \& Spring Boot 3} for an online psychometric evaluation platform (1,300+ assessments, 3,000+ career role mappings), alongside supporting React frontend integration.}
+        \resumeItem{\textbf{Scoring Engine \& RBAC:} Engineered real-time psychometric trait matrix algorithms computing multi-dimensional cognitive/behavioral percentiles; established Spring Security 6 RBAC isolating Students, Corporates, Government, and Partner networks.}
+        \resumeItem{\textbf{PostgreSQL Multi-Schema Tuning:} Integrated multi-schema database architecture (\texttt{nealife-dev}), eliminated HikariCP connection \texttt{search\_path} bugs, and optimized query execution plans, dropping API 500 errors by 35\% and cutting query latency from 640ms to 42ms (-93\%).}
+        \resumeItem{\textbf{Automated PDF Vault \& Cloud:} Built dynamic PDF assessment report generation delivering secure documents via pre-signed AWS S3 URLs; containerized services via multi-stage \textbf{Docker} builds deployed on \textbf{AWS EC2} with Nginx reverse proxy.}
+      \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+    \resumeSubheading
+      {Savitribai Phule Pune University}{Pune, India}
+      {Master of Computer Science (M.Sc.) -- CGPA: 7.60}{2022 -- 2024}
+    \resumeSubheading
+      {Savitribai Phule Pune University}{Pune, India}
+      {Bachelor of Computer Science (B.Sc.) -- Percentage: 83.22\%}{2018 -- 2021}
+\resumeSubHeadingListEnd
+
+%-----------CERTIFICATIONS-----------
+\section{Certifications}
+\begin{itemize}[leftmargin=0.15in, label=\textbullet]
+    \small{
+      \item \textbf{Generative AI Certification} -- Technical University of Munich
+      \item \textbf{Java \& Advanced Java Certification} -- CWS Technologies
+    }
+\end{itemize}
+
+\end{document}

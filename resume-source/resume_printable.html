@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pratik Ghodke - Resume</title>
+  <style>
+    @page {
+      size: letter;
+      margin: 0.45in 0.55in;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 9.8pt;
+      line-height: 1.35;
+      color: #1a1a1a;
+      background: #ffffff;
+      -webkit-font-smoothing: antialiased;
+    }
+    a {
+      color: #0b57d0;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 12px;
+      padding-bottom: 4px;
+    }
+    .header h1 {
+      font-size: 20pt;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: #000;
+      margin-bottom: 2px;
+    }
+    .header .subtitle {
+      font-size: 10.5pt;
+      font-weight: 600;
+      color: #222;
+      margin-bottom: 4px;
+    }
+    .header .contacts {
+      font-size: 9pt;
+      color: #444;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 6px;
+    }
+    .header .contacts span {
+      display: inline-block;
+    }
+    .section-title {
+      font-size: 10.5pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      color: #000;
+      border-bottom: 1.2px solid #222;
+      padding-bottom: 2px;
+      margin-top: 10px;
+      margin-bottom: 6px;
+    }
+    .summary-text {
+      font-size: 9.2pt;
+      color: #2b2b2b;
+      text-align: justify;
+      margin-bottom: 4px;
+    }
+    .skills-block {
+      font-size: 9pt;
+      margin-bottom: 2px;
+    }
+    .skills-row {
+      margin-bottom: 2px;
+      line-height: 1.35;
+    }
+    .skills-row strong {
+      color: #111;
+      font-weight: 600;
+    }
+    .job-entry {
+      margin-bottom: 8px;
+    }
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 1px;
+    }
+    .job-title {
+      font-size: 9.6pt;
+      font-weight: 700;
+      color: #111;
+    }
+    .job-company {
+      font-weight: 600;
+      color: #222;
+    }
+    .job-period, .job-location {
+      font-size: 8.8pt;
+      font-style: italic;
+      color: #444;
+      white-space: nowrap;
+    }
+    ul.bullet-list {
+      list-style-type: disc;
+      margin-left: 16px;
+      margin-top: 2px;
+    }
+    ul.bullet-list li {
+      font-size: 9pt;
+      color: #222;
+      margin-bottom: 2px;
+      line-height: 1.3;
+      text-align: justify;
+    }
+    ul.bullet-list li strong {
+      color: #000;
+    }
+    .edu-row, .cert-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 9pt;
+      margin-bottom: 2px;
+    }
+    .edu-title {
+      font-weight: 600;
+      color: #111;
+    }
+    .edu-meta {
+      font-style: italic;
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <div class="header">
+    <h1>Pratik Ghodke</h1>
+    <div class="subtitle">Software Engineer | Mobile &amp; Full-Stack Developer</div>
+    <div class="contacts">
+      <span>Pune, Maharashtra, India</span> • 
+      <a href="mailto:pratikghodke03@gmail.com">pratikghodke03@gmail.com</a> • 
+      <span>+91 9762878326</span> • 
+      <a href="https://linkedin.com/in/pratikghodke" target="_blank">linkedin.com/in/pratikghodke</a> • 
+      <a href="https://github.com/PratikNeopace" target="_blank">github.com/PratikNeopace</a> • 
+      <a href="https://pratik-portfolio.vercel.app" target="_blank">pratik-portfolio.vercel.app</a>
+    </div>
+  </div>
+
+  <!-- SUMMARY -->
+  <div class="section-title">Professional Summary</div>
+  <p class="summary-text">
+    <strong>Software Engineer</strong> with ~2 years of experience leading full-stack product lifecycles across cross-platform mobile engineering (<strong>Flutter/Dart</strong>) and enterprise backend microservices (<strong>Java, Spring Boot, PostgreSQL</strong>). Proven track record leading commercial applications from system design to <strong>Google Play Console</strong> release and production Linux deployment. Specialized in modular state management with <strong>Riverpod</strong>, resilient networking with <strong>Dio</strong>, <strong>JWT/RBAC</strong> authorization, <strong>Liquibase</strong> database migrations, and scalable RESTful API design.
+  </p>
+
+  <!-- SKILLS -->
+  <div class="section-title">Technical Skills</div>
+  <div class="skills-block">
+    <div class="skills-row">
+      <strong>Languages:</strong> Dart, Java (Java 21/17), TypeScript, JavaScript, SQL, HTML5, CSS3
+    </div>
+    <div class="skills-row">
+      <strong>Mobile &amp; Frontend:</strong> Flutter, Riverpod (StateNotifier, AsyncNotifier), Dio (Interceptors), Material Design 3, OpenStreetMap &amp; Geocoding, Vite, React
+    </div>
+    <div class="skills-row">
+      <strong>Backend &amp; Microservices:</strong> Spring Boot 3.x, Spring MVC, Spring Security, Spring Data JPA, Hibernate ORM, RESTful APIs, Liquibase Migrations, DTOs
+    </div>
+    <div class="skills-row">
+      <strong>Security &amp; Real-Time:</strong> JWT Authentication, Role-Based Access Control (RBAC), OTP Verification, Server-Sent Events (SSE), WebSockets
+    </div>
+    <div class="skills-row">
+      <strong>Databases &amp; Cloud:</strong> PostgreSQL (Multi-Schema, Query Optimization), MySQL, MongoDB, Docker, AWS (EC2, S3), Linux, Nginx
+    </div>
+    <div class="skills-row">
+      <strong>DevOps &amp; Tools:</strong> Google Play Console (AAB Releases), Git, GitHub, Maven, Gradle, Postman, Swagger/OpenAPI, IntelliJ IDEA, VS Code
+    </div>
+  </div>
+
+  <!-- EXPERIENCE -->
+  <div class="section-title">Professional Experience</div>
+
+  <div class="job-entry">
+    <div class="job-header">
+      <span class="job-title">Software Engineer (Full-Stack &amp; Mobile Lead) <span style="font-weight: normal;">|</span> <span class="job-company">NeoPace InfoTech LLP</span></span>
+      <span class="job-period">Feb 2026 – Present | Pune, India</span>
+    </div>
+    <ul class="bullet-list">
+      <li><strong>Full-Stack Leadership:</strong> Led mobile frontend and backend microservices architecture across commercial client applications in <strong>Flutter, Dart, Java Spring Boot</strong>, and <strong>PostgreSQL</strong>.</li>
+      <li><strong>Neo Parlour (Salon SaaS):</strong> Engineered multi-role appointment scheduling engine handling customer booking flows, salon holiday schedules, date/time slot validation, and service status tracking; designed Spring Boot REST APIs with DTO validation and status enums.</li>
+      <li><strong>NeoCloudBites (Delivery App):</strong> Developed cross-platform Flutter application featuring dynamic menu browsing, cart state management, and an interactive <strong>OpenStreetMap location picker</strong> with reverse geocoding for precise delivery address selection.</li>
+      <li><strong>Resilient Networking &amp; Flags:</strong> Implemented modular <strong>Dio</strong> networking layer with custom interceptors for automated JWT authorization, error normalization, and remote feature flags for controlled rollouts.</li>
+      <li><strong>Play Store Release:</strong> Managed end-to-end mobile release pipelines, packaging signed Android App Bundles (<strong>AAB</strong>), meeting Google Play compliance, and deploying to the <strong>Google Play Console</strong>.</li>
+      <li><strong>NeoSowInfra (Enterprise Web):</strong> Built secure Spring Boot backend services with <strong>Liquibase</strong> database migrations, custom PostgreSQL schemas, and granular RBAC authorization; deployed full-stack Vite frontend and APIs to production Linux servers.</li>
+    </ul>
+  </div>
+
+  <div class="job-entry">
+    <div class="job-header">
+      <span class="job-title">Software Developer <span style="font-weight: normal;">|</span> <span class="job-company">Proser Digital Solutions</span></span>
+      <span class="job-period">Jul 2025 – Jan 2026 | Pune, India</span>
+    </div>
+    <ul class="bullet-list">
+      <li><strong>Cross-Platform Development:</strong> Built responsive, cross-platform mobile and web applications using <strong>Flutter and Dart</strong>, interfacing with complex backend REST APIs.</li>
+      <li><strong>State Management:</strong> Implemented client-side state architecture using <strong>Riverpod</strong>, establishing clean separation of concerns between business logic and UI layers and authoring reusable widget components.</li>
+      <li><strong>Performance &amp; CI/CD:</strong> Optimized cross-device rendering performance, reduced UI frame drops, and managed team version control workflows using <strong>Git and GitHub</strong>.</li>
+    </ul>
+  </div>
+
+  <div class="job-entry">
+    <div class="job-header">
+      <span class="job-title">Software Developer Intern <span style="font-weight: normal;">|</span> <span class="job-company">Tayan Solution</span></span>
+      <span class="job-period">Feb 2025 – Jul 2025 | Pune, India</span>
+    </div>
+    <ul class="bullet-list">
+      <li><strong>LMS Backend Optimization:</strong> Improved Learning Management System (LMS) execution performance by 20% through database query refactoring and architecture optimization using <strong>JSP, Servlets, and JDBC</strong>.</li>
+    </ul>
+  </div>
+
+  <!-- PROJECTS -->
+  <div class="section-title">Key Software Projects</div>
+
+  <div class="job-entry">
+    <div class="job-header">
+      <span class="job-title">NeaLife — Online Psychometric &amp; Psychological Assessment Platform</span>
+      <span class="job-location">Java 21, Spring Boot 3, Spring Security 6, PostgreSQL, AWS, Docker</span>
+    </div>
+    <ul class="bullet-list">
+      <li><strong>Lead Backend Systems:</strong> Solely architected and delivered the enterprise backend in <strong>Java 21 &amp; Spring Boot 3</strong> for an online psychometric evaluation platform (1,300+ assessments, 3,000+ career role mappings), alongside supporting React frontend integration.</li>
+      <li><strong>Scoring Engine &amp; RBAC:</strong> Engineered real-time psychometric trait matrix algorithms computing multi-dimensional cognitive/behavioral percentiles; established Spring Security 6 RBAC isolating Students, Corporates, Government, and Partner networks.</li>
+      <li><strong>PostgreSQL Multi-Schema Tuning:</strong> Integrated multi-schema database architecture (<code>nealife-dev</code>), eliminated HikariCP connection <code>search_path</code> bugs, and optimized query execution plans, dropping API 500 errors by 35% and cutting query latency from 640ms to 42ms (-93%).</li>
+      <li><strong>Automated PDF Vault &amp; Cloud:</strong> Built dynamic PDF assessment report generation delivering secure documents via pre-signed AWS S3 URLs; containerized services via multi-stage <strong>Docker</strong> builds deployed on <strong>AWS EC2</strong> with Nginx reverse proxy.</li>
+    </ul>
+  </div>
+
+  <!-- EDUCATION & CERTIFICATIONS -->
+  <div class="section-title">Education &amp; Certifications</div>
+  <div class="edu-row">
+    <span><strong>Master of Computer Science (M.Sc.)</strong> — Savitribai Phule Pune University</span>
+    <span class="edu-meta">CGPA: 7.60 | 2022 – 2024</span>
+  </div>
+  <div class="edu-row">
+    <span><strong>Bachelor of Computer Science (B.Sc.)</strong> — Savitribai Phule Pune University</span>
+    <span class="edu-meta">Percentage: 83.22% | 2018 – 2021</span>
+  </div>
+  <div class="cert-row" style="margin-top: 3px;">
+    <span><strong>Certifications:</strong> Generative AI Certification (Technical University of Munich) • Java &amp; Advanced Java (CWS Technologies)</span>
+  </div>
+
+</body>
+</html>
