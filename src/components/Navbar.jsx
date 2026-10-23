@@ -121,6 +121,7 @@ export const Navbar = ({ onOpenResume }) => {
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="lg:hidden p-2.5 rounded-xl bg-white/[0.05] border border-white/[0.1] text-slate-300 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400"
             aria-label="Toggle navigation menu"
+            aria-expanded={isMobileMenuOpen}
           >
             {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -129,7 +130,7 @@ export const Navbar = ({ onOpenResume }) => {
 
       {/* Mobile Drawer */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden bg-[#080a0f]/98 border-b border-white/[0.07] backdrop-blur-2xl px-6 pt-4 pb-8 mt-3 space-y-3 animate-fade-in">
+        <nav aria-label="Mobile navigation" className="lg:hidden bg-[#080a0f]/98 border-b border-white/[0.07] backdrop-blur-2xl px-6 pt-4 pb-8 mt-3 space-y-3 animate-fade-in">
           {navLinks.map((link) => (
             <a
               key={link.name}
@@ -159,7 +160,7 @@ export const Navbar = ({ onOpenResume }) => {
               Get in Touch
             </a>
           </div>
-        </div>
+        </nav>
       )}
     </header>
   );

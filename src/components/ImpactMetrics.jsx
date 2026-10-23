@@ -37,7 +37,7 @@ export const ImpactMetrics = () => {
                   </span>
                 </div>
 
-                <div className="font-display font-extrabold text-5xl sm:text-6xl text-white tracking-tight group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-sky-300 group-hover:to-indigo-300 transition-all duration-300 mb-2">
+                <div className="font-display font-extrabold text-4xl sm:text-5xl xl:text-6xl text-white tracking-tight group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-sky-300 group-hover:to-indigo-300 transition-all duration-300 mb-2 whitespace-nowrap">
                   {item.value}
                 </div>
 

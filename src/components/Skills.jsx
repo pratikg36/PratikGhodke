@@ -36,7 +36,7 @@ export const Skills = () => {
   const currentCategory = skillCategories[selectedCategory];
 
   return (
-    <section id="skills" className="py-28 relative z-10 bg-[#080a0f] border-t border-white/[0.06]">
+    <section id="skills" className="py-28 relative z-10 bg-[#080a0f] border-t border-white/[0.06] scroll-mt-24 sm:scroll-mt-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="mb-14 pb-8 border-b border-white/[0.06] flex flex-col md:flex-row md:items-end justify-between gap-6">
@@ -45,10 +45,10 @@ export const Skills = () => {
               <Layers className="w-3.5 h-3.5" />
               <span>03 // CONNECTED TECHNOLOGY ECOSYSTEM</span>
             </div>
-            <h2 className="font-display font-extrabold text-4xl sm:text-6xl text-white tracking-tight uppercase">
-              CORE CAPABILITIES &amp; <br />
+            <h2 className="font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl text-white tracking-tight uppercase leading-[1.15]">
+              CORE CAPABILITIES <br className="hidden sm:inline" />
               <span className="text-slate-100">
-                TECH <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-indigo-400">ECOSYSTEM</span>
+                &amp; TECH <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-indigo-400">ECOSYSTEM</span>
               </span>
             </h2>
           </div>

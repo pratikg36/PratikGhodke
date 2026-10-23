@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ExternalLink, Layers, ArrowUpRight, CheckCircle2, Terminal, Smartphone, Database, Shield, AlertCircle, Sparkles, X, ChevronRight } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
 import { Magnetic } from './ui/Magnetic';
@@ -7,6 +7,21 @@ export const Projects = () => {
   const { projects } = portfolioData;
   const [activeFilter, setActiveFilter] = useState('All');
   const [selectedProject, setSelectedProject] = useState(null);
+
+  // Close modal on Escape key press
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') setSelectedProject(null);
+    };
+    if (selectedProject) {
+      window.addEventListener('keydown', handleKeyDown);
+      document.body.style.overflow = 'hidden';
+    }
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+      document.body.style.overflow = '';
+    };
+  }, [selectedProject]);
 
   const categories = ['All', 'Mobile', 'Backend', 'Full-Stack'];
 
@@ -19,7 +34,7 @@ export const Projects = () => {
   });
 
   return (
-    <section id="projects" className="py-28 relative z-10 bg-[#080a0f] border-t border-white/[0.06]">
+    <section id="projects" className="py-28 relative z-10 bg-[#080a0f] border-t border-white/[0.06] scroll-mt-24 sm:scroll-mt-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16 pb-8 border-b border-white/[0.06]">
@@ -320,12 +335,18 @@ export const Projects = () => {
 
       {/* Expanded Interactive Case Study Modal */}
       {selectedProject && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md animate-fade-in">
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="case-study-title"
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md animate-fade-in"
+        >
           <div className="relative w-full max-w-4xl bg-[#0c0e16] border border-white/[0.08] rounded-3xl p-6 sm:p-10 shadow-2xl overflow-y-auto max-h-[90vh]">
             {/* Close button */}
             <button
               onClick={() => setSelectedProject(null)}
-              className="absolute top-6 right-6 p-2 rounded-full bg-white/[0.05] hover:bg-white/[0.1] text-slate-400 hover:text-white transition-colors"
+              aria-label="Close case study details"
+              className="absolute top-6 right-6 p-2 rounded-full bg-white/[0.05] hover:bg-white/[0.1] text-slate-400 hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400"
             >
               <X className="w-5 h-5" />
             </button>

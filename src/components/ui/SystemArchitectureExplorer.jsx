@@ -19,7 +19,7 @@ export const SystemArchitectureExplorer = ({ onSelectProject }) => {
   const ActiveIcon = iconMap[activeNode.id] || Server;
 
   return (
-    <section id="architecture" className="py-24 relative z-10 bg-[#080a0f] border-t border-white/[0.06]">
+    <section id="architecture" className="py-24 relative z-10 bg-[#080a0f] border-t border-white/[0.06] scroll-mt-24 sm:scroll-mt-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="mb-14 pb-6 border-b border-white/[0.06] flex flex-col md:flex-row md:items-end justify-between gap-6">
@@ -48,20 +48,24 @@ export const SystemArchitectureExplorer = ({ onSelectProject }) => {
               <span className="font-mono text-xs text-slate-400 tracking-wider uppercase">
                 SYSTEM PIPELINE TOPOLOGY
               </span>
-              <span className="font-mono text-xs text-emerald-400 flex items-center gap-1.5">
-                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
-                STATUS: LIVE MODEL
+              <span className="font-mono text-xs text-sky-400 flex items-center gap-1.5 font-medium">
+                <span className="w-1.5 h-1.5 rounded-full bg-sky-400" />
+                SYSTEM BLUEPRINT
               </span>
             </div>
 
             {/* Nodes Stack */}
-            <div className="space-y-4">
+            <div className="space-y-4" role="tablist" aria-label="System Subsystems">
               {systemArchitecture.nodes.map((node, index) => {
                 const Icon = iconMap[node.id] || Server;
                 const isActive = activeNodeId === node.id;
                 return (
                   <button
                     key={node.id}
+                    role="tab"
+                    id={`tab-${node.id}`}
+                    aria-selected={isActive}
+                    aria-controls="subsystem-inspector"
                     onClick={() => setActiveNodeId(node.id)}
                     className={`w-full text-left p-4 sm:p-5 rounded-2xl border transition-all duration-300 flex items-center justify-between group relative overflow-hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 ${
                       isActive
@@ -111,12 +115,17 @@ export const SystemArchitectureExplorer = ({ onSelectProject }) => {
             {/* Connection Signal Footer */}
             <div className="mt-6 pt-4 border-t border-white/[0.06] flex items-center justify-between text-[11px] font-mono text-slate-500">
               <span>PROTOCOL: JSON REST / SSE</span>
-              <span>STATE: SYNCHRONIZED</span>
+              <span>INTEGRATION: DTOs &amp; EVENTS</span>
             </div>
           </div>
 
           {/* Right: Subsystem Deep-Dive Inspector */}
-          <div className="lg:col-span-5 rounded-3xl bg-gradient-to-b from-[#141826] to-[#0c0e16] border border-sky-500/25 p-6 sm:p-8 shadow-2xl relative sticky top-28">
+          <div
+            id="subsystem-inspector"
+            role="tabpanel"
+            aria-labelledby={`tab-${activeNode.id}`}
+            className="lg:col-span-5 rounded-3xl bg-gradient-to-b from-[#141826] to-[#0c0e16] border border-sky-500/25 p-6 sm:p-8 shadow-2xl relative sticky top-28"
+          >
             {/* Header */}
             <div className="flex items-center justify-between pb-4 mb-6 border-b border-white/[0.08]">
               <div className="flex items-center gap-2">

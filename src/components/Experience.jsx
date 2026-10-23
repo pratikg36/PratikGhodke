@@ -6,7 +6,7 @@ export const Experience = () => {
   const { experiences } = portfolioData;
 
   return (
-    <section id="experience" className="py-28 relative z-10 bg-[#080a0f] border-t border-white/[0.06]">
+    <section id="experience" className="py-28 relative z-10 bg-[#080a0f] border-t border-white/[0.06] scroll-mt-24 sm:scroll-mt-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 xl:gap-16">
           {/* Left Column: Sticky Editorial Heading */}

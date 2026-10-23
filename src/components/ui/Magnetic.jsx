@@ -8,8 +8,8 @@ export const Magnetic = ({ children, strength = 0.35, className = '' }) => {
     const el = magneticRef.current;
     if (!el) return;
 
-    // Disable on touch devices
-    if (window.matchMedia('(pointer: coarse)').matches) return;
+    // Disable on touch devices or if user prefers reduced motion
+    if (window.matchMedia('(pointer: coarse)').matches || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
     const xTo = gsap.quickTo(el, 'x', { duration: 0.8, ease: 'power3.out' });
     const yTo = gsap.quickTo(el, 'y', { duration: 0.8, ease: 'power3.out' });

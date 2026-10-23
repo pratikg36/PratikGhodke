@@ -18,9 +18,9 @@ export const portfolioData = {
   // Concrete, verified metrics with substantiating evidence
   metrics: [
     {
-      value: "2+",
-      label: "Years Experience",
-      detail: "Full-stack mobile & backend engineering",
+      value: "~2 Yrs",
+      label: "Engineering Tenure",
+      detail: "Full-stack mobile & backend microservices",
       substantiation: "Continuous engineering tenure: Tayan Solution (Feb–Jul 2025), Proser Digital (Jul 2025–Jan 2026), NeoPace InfoTech (Feb 2026–Present).",
       icon: "Clock",
     },
@@ -39,10 +39,10 @@ export const portfolioData = {
       icon: "ShieldCheck",
     },
     {
-      value: "35%+",
-      label: "Latency & Error Reduction",
-      detail: "Via query tuning, indexing & schema optimization",
-      substantiation: "Diagnosed PostgreSQL search_path bottlenecks and unindexed token lookups in NeaLife, reducing API 500 error rates by 35%.",
+      value: "-93%",
+      label: "Query Latency Reduction",
+      detail: "640ms to 42ms via PostgreSQL schema & query tuning",
+      substantiation: "Diagnosed Hibernate search_path bottlenecks and added composite indices in NeaLife, cutting latency by 93% and dropping 500 error rates by 35%.",
       icon: "TrendingUp",
     },
   ],

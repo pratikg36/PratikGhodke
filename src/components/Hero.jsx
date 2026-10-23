@@ -28,7 +28,7 @@ export const Hero = ({ onOpenResume }) => {
   }, []);
 
   return (
-    <section id="about" className="relative min-h-[94vh] flex flex-col justify-between pt-24 pb-12 sm:pt-32 sm:pb-16 overflow-hidden">
+    <section id="about" className="relative min-h-[94vh] flex flex-col justify-between pt-24 pb-12 sm:pt-32 sm:pb-16 overflow-hidden scroll-mt-24 sm:scroll-mt-28">
       {/* Interactive Constellation Canvas */}
       <InteractiveCanvas />
 
@@ -106,7 +106,7 @@ export const Hero = ({ onOpenResume }) => {
               <div className="flex items-center justify-between pb-4 mb-4 border-b border-white/[0.08]">
                 <div className="flex items-center gap-2 font-mono text-xs text-sky-400 font-bold uppercase tracking-wider">
                   <Cpu className="w-4 h-4" />
-                  <span>ARCHITECTURE TELEMETRY</span>
+                  <span>SYSTEM ARCHITECTURE PREVIEW</span>
                 </div>
                 <div className="flex gap-1.5">
                   <span className="w-2.5 h-2.5 rounded-full bg-red-500/80" />

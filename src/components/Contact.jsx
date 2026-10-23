@@ -14,9 +14,9 @@ export const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-32 relative z-10 bg-[#080a0f] border-t border-white/[0.06] overflow-hidden">
+    <section id="contact" className="py-24 sm:py-32 relative z-10 bg-[#080a0f] border-t border-white/[0.06] overflow-hidden scroll-mt-24 sm:scroll-mt-28">
       {/* Background Radial Glow */}
-      <div className="pointer-events-none absolute bottom-0 left-1/2 -translate-x-1/2 w-[850px] h-[400px] bg-gradient-to-t from-sky-500/10 via-indigo-500/5 to-transparent blur-[160px] rounded-full" />
+      <div className="pointer-events-none absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] sm:w-[850px] h-[350px] bg-[radial-gradient(ellipse_at_center,_rgba(56,189,248,0.08)_0%,_rgba(99,102,241,0.04)_50%,_transparent_75%)] rounded-full" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
@@ -26,8 +26,8 @@ export const Contact = () => {
             <span>04 // INITIATE COLLABORATION</span>
           </div>
 
-          {/* Expressive Editorial Headline */}
-          <h2 className="font-display font-extrabold text-4xl sm:text-6xl md:text-7xl lg:text-8xl text-white tracking-tight uppercase leading-[0.95] mb-8">
+          {/* Expressive Editorial Headline - Calibrated */}
+          <h2 className="font-display font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white tracking-tight uppercase leading-[1.05] mb-6">
             LET'S ARCHITECT <br />
             <span className="text-slate-100">
               HIGH-IMPACT <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-indigo-400">SYSTEMS.</span>
