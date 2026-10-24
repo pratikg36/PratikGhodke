@@ -60,9 +60,10 @@ export const Hero = ({ onOpenResume }) => {
               <span>FULL-STACK ARCHITECTURE &amp; MOBILE SYSTEMS</span>
             </div>
 
-            <h1 className="font-display font-extrabold text-4xl sm:text-7xl lg:text-8xl tracking-tight text-white leading-[0.95] sm:leading-[0.92] uppercase select-none break-words">
-              PRATIK <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-300 via-sky-400 to-indigo-400">
+            <h1 className="font-display font-extrabold text-4xl sm:text-6xl md:text-7xl lg:text-6xl xl:text-7xl 2xl:text-8xl tracking-tight text-white leading-[0.95] sm:leading-[0.92] uppercase select-none">
+              <span className="inline-block whitespace-nowrap">PRATIK</span>
+              <br />
+              <span className="inline-block whitespace-nowrap text-transparent bg-clip-text bg-gradient-to-r from-sky-300 via-sky-400 to-indigo-400">
                 GHODKE
               </span>
             </h1>
