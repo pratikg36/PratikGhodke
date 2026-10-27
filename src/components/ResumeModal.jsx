@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { X, FileDown, ExternalLink, Printer } from 'lucide-react';
 
 export const ResumeModal = ({ isOpen, onClose }) => {
-  const pdfUrl = `${import.meta.env.BASE_URL}Pratik_Ghodke_Resume.pdf?t=20261023`;
+  const pdfUrl = `${import.meta.env.BASE_URL}Pratik_Ghodke_Resume.pdf?t=20261027b`;
 
   useEffect(() => {
     const handleKeyDown = (e) => {
