@@ -298,10 +298,10 @@ export const portfolioData = {
     {
       id: "neo-cloud-bites",
       title: "NeoCloudBites",
-      category: "Mobile",
+      category: "Mobile / Web",
       tag: "Food & Hospitality",
-      status: "Shipped to Play Store",
-      liveUrl: null,
+      status: "Live Web (Mobile in Rollout)",
+      liveUrl: "https://neocloudbites.com/",
       summary:
         "Commercial cloud kitchen and food delivery application with real-time location mapping and dynamic cart workflows.",
       problem:
@@ -335,7 +335,7 @@ export const portfolioData = {
       category: "Backend / Web",
       tag: "Enterprise Platform",
       status: "Live Web Platform",
-      liveUrl: "https://www.neosowinfra.com",
+      liveUrl: "https://neosowinfra.com/login",
       summary:
         "Enterprise infrastructure management and operational web portal with database versioning and secure user administration.",
       problem:

@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { X, FileDown, ExternalLink, Printer } from 'lucide-react';
 
 export const ResumeModal = ({ isOpen, onClose }) => {
-  const pdfUrl = `${import.meta.env.BASE_URL}Pratik_Ghodke_Resume.pdf?t=20261027b`;
+  const pdfUrl = `${import.meta.env.BASE_URL}Pratik_Ghodke_Resume.pdf?t=20261027c`;
 
   useEffect(() => {
     const handleKeyDown = (e) => {
@@ -125,10 +125,10 @@ export const ResumeModal = ({ isOpen, onClose }) => {
               <ul className="list-disc ml-5 space-y-1 text-xs text-slate-700">
                 <li><strong>Full-Stack Leadership:</strong> Led mobile frontend and backend microservices architecture across commercial client applications in <strong>Flutter, Dart, Java Spring Boot</strong>, and <strong>PostgreSQL</strong>.</li>
                 <li><strong>Neo Parlour (Dual-App SaaS &amp; CRM)</strong> [<a href="https://www.neoparlour.com/" target="_blank" rel="noopener noreferrer" className="text-sky-600 hover:underline">Web</a> | <a href="https://play.google.com/store/apps/details?id=com.neoparlour.customer" target="_blank" rel="noopener noreferrer" className="text-sky-600 hover:underline">Customer App</a> | <a href="https://play.google.com/store/apps/details?id=com.neoparlour.owner" target="_blank" rel="noopener noreferrer" className="text-sky-600 hover:underline">Owner CRM</a>]: Architected dual-app Google Play ecosystem; authored Spring Boot 3 scheduling microservices with JPA @Version optimistic locking, staff attendance/commission modules, and inventory controls.</li>
-                <li><strong>NeoCloudBites (Delivery App):</strong> Developed cross-platform Flutter application featuring dynamic menu browsing, cart state management, and an interactive <strong>OpenStreetMap location picker</strong> with reverse geocoding for precise delivery address selection.</li>
+                <li><strong>NeoCloudBites (Delivery App)</strong> [<a href="https://neocloudbites.com/" target="_blank" rel="noopener noreferrer" className="text-sky-600 hover:underline">Web</a>]: Developed cross-platform Flutter application featuring dynamic menu browsing, cart state management, and an interactive <strong>OpenStreetMap location picker</strong> with reverse geocoding for precise delivery address selection.</li>
                 <li><strong>Resilient Networking &amp; Flags:</strong> Implemented modular <strong>Dio</strong> networking layer with custom interceptors for automated JWT authorization, error normalization, and remote feature flags for controlled rollouts.</li>
                 <li><strong>Play Store Release:</strong> Managed end-to-end mobile release pipelines, packaging signed Android App Bundles (<strong>AAB</strong>), meeting Google Play compliance, and deploying to the <strong>Google Play Console</strong>.</li>
-                <li><strong>NeoSowInfra (Enterprise Web):</strong> Built secure Spring Boot backend services with <strong>Liquibase</strong> database migrations, custom PostgreSQL schemas, and granular RBAC authorization; deployed full-stack Vite frontend and APIs to production Linux servers.</li>
+                <li><strong>NeoSowInfra (Enterprise Web)</strong> [<a href="https://neosowinfra.com/login" target="_blank" rel="noopener noreferrer" className="text-sky-600 hover:underline">Portal</a>]: Built secure Spring Boot backend services with <strong>Liquibase</strong> database migrations, custom PostgreSQL schemas, and granular RBAC authorization; deployed full-stack Vite frontend and APIs to production Linux servers.</li>
               </ul>
             </div>
 
