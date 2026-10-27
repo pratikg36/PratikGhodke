@@ -1,8 +1,9 @@
-import React, { useEffect } from 'react';
-import { X, FileDown, ExternalLink, Printer } from 'lucide-react';
+import React, { useEffect, useState } from 'react';
+import { X, FileDown, ExternalLink, Printer, Loader2 } from 'lucide-react';
 
 export const ResumeModal = ({ isOpen, onClose }) => {
   const pdfUrl = `${import.meta.env.BASE_URL}Pratik_Ghodke_Resume.pdf?t=20261027c`;
+  const [isDownloading, setIsDownloading] = useState(false);
 
   useEffect(() => {
     const handleKeyDown = (e) => {
@@ -18,11 +19,40 @@ export const ResumeModal = ({ isOpen, onClose }) => {
     };
   }, [isOpen, onClose]);
 
-  if (!isOpen) return null;
+  const handleDownloadPdf = async (e) => {
+    if (e) e.preventDefault();
+    if (isDownloading) return;
+    setIsDownloading(true);
 
-  const handlePrint = () => {
-    window.open(pdfUrl, '_blank');
+    try {
+      const response = await fetch(pdfUrl);
+      if (!response.ok) throw new Error('Network response was not ok');
+      const blob = await response.blob();
+      const blobUrl = window.URL.createObjectURL(blob);
+
+      const link = document.createElement('a');
+      link.href = blobUrl;
+      link.download = 'Pratik_Ghodke_Resume.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+
+      setTimeout(() => window.URL.revokeObjectURL(blobUrl), 2000);
+    } catch (err) {
+      console.error('Blob download failed, using direct anchor fallback:', err);
+      const fallback = document.createElement('a');
+      fallback.href = `${import.meta.env.BASE_URL}Pratik_Ghodke_Resume.pdf`;
+      fallback.download = 'Pratik_Ghodke_Resume.pdf';
+      fallback.target = '_blank';
+      document.body.appendChild(fallback);
+      fallback.click();
+      document.body.removeChild(fallback);
+    } finally {
+      setTimeout(() => setIsDownloading(false), 600);
+    }
   };
+
+  if (!isOpen) return null;
 
   return (
     <div
@@ -48,16 +78,25 @@ export const ResumeModal = ({ isOpen, onClose }) => {
           </div>
 
           <div className="flex items-center gap-2 shrink-0">
-            <a
-              href={pdfUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 px-3 py-2 min-h-[40px] rounded-lg text-xs font-semibold bg-sky-500 hover:bg-sky-400 text-white transition-colors shadow-sm"
+            <button
+              onClick={handleDownloadPdf}
+              disabled={isDownloading}
+              className="inline-flex items-center gap-1.5 px-3.5 py-2 min-h-[40px] rounded-lg text-xs font-semibold bg-sky-500 hover:bg-sky-400 active:bg-sky-600 text-white transition-all shadow-sm disabled:opacity-75 cursor-pointer"
+              title="Download PDF directly to device"
             >
-              <FileDown className="w-3.5 h-3.5" />
-              <span className="hidden sm:inline">Download PDF</span>
-              <span className="sm:hidden">PDF</span>
-            </a>
+              {isDownloading ? (
+                <>
+                  <Loader2 className="w-3.5 h-3.5 animate-spin" />
+                  <span>Downloading...</span>
+                </>
+              ) : (
+                <>
+                  <FileDown className="w-3.5 h-3.5" />
+                  <span className="hidden sm:inline">Download PDF</span>
+                  <span className="sm:hidden">Download</span>
+                </>
+              )}
+            </button>
             <button
               onClick={onClose}
               className="p-2 min-h-[40px] min-w-[40px] flex items-center justify-center rounded-lg bg-white/10 hover:bg-white/20 text-slate-300 hover:text-white transition-colors"
@@ -224,10 +263,10 @@ export const ResumeModal = ({ isOpen, onClose }) => {
           <span className="text-[11px] sm:text-xs text-slate-500">
             Matching official LaTeX version (<code className="text-slate-700">Pratik_Ghodke_Resume.tex</code>)
           </span>
-          <div className="flex gap-2">
+          <div className="flex flex-wrap items-center gap-2">
             <button
               onClick={onClose}
-              className="px-4 py-2 min-h-[38px] rounded-lg text-xs font-medium bg-slate-200 hover:bg-slate-300 text-slate-700 transition-colors"
+              className="px-3.5 py-2 min-h-[38px] rounded-lg text-xs font-medium bg-slate-200 hover:bg-slate-300 text-slate-700 transition-colors"
             >
               Close
             </button>
@@ -235,10 +274,28 @@ export const ResumeModal = ({ isOpen, onClose }) => {
               href={pdfUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-2 min-h-[38px] rounded-lg text-xs font-semibold bg-sky-600 hover:bg-sky-500 text-white transition-colors"
+              className="inline-flex items-center gap-1.5 px-3.5 py-2 min-h-[38px] rounded-lg text-xs font-medium bg-white hover:bg-slate-100 text-slate-700 border border-slate-300 transition-colors"
             >
-              Open PDF
+              <span>Open in Tab</span>
+              <ExternalLink className="w-3.5 h-3.5" />
             </a>
+            <button
+              onClick={handleDownloadPdf}
+              disabled={isDownloading}
+              className="inline-flex items-center gap-1.5 px-4 py-2 min-h-[38px] rounded-lg text-xs font-semibold bg-sky-600 hover:bg-sky-500 active:bg-sky-700 text-white transition-colors shadow-sm disabled:opacity-75 cursor-pointer"
+            >
+              {isDownloading ? (
+                <>
+                  <Loader2 className="w-3.5 h-3.5 animate-spin" />
+                  <span>Downloading...</span>
+                </>
+              ) : (
+                <>
+                  <FileDown className="w-3.5 h-3.5" />
+                  <span>Download PDF</span>
+                </>
+              )}
+            </button>
           </div>
         </div>
       </div>
