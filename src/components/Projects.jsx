@@ -376,9 +376,16 @@ export const Projects = () => {
           role="dialog"
           aria-modal="true"
           aria-labelledby="case-study-title"
+          onClick={(e) => {
+            if (e.target === e.currentTarget) setSelectedProject(null);
+          }}
           className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/85 backdrop-blur-md animate-fade-in"
         >
-          <div className="relative w-full max-w-4xl bg-[#0c0e16] border border-white/[0.08] rounded-3xl p-4 sm:p-8 lg:p-10 shadow-2xl overflow-y-auto max-h-[90vh]">
+          <div 
+            data-lenis-prevent
+            className="relative w-full max-w-4xl bg-[#0c0e16] border border-white/[0.08] rounded-3xl p-4 sm:p-8 lg:p-10 shadow-2xl overflow-y-auto overscroll-contain max-h-[90vh]"
+            style={{ WebkitOverflowScrolling: 'touch' }}
+          >
             {/* Close button */}
             <button
               onClick={() => setSelectedProject(null)}

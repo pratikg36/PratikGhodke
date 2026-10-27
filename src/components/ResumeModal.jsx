@@ -29,11 +29,17 @@ export const ResumeModal = ({ isOpen, onClose }) => {
       role="dialog"
       aria-modal="true"
       aria-label="Official Resume Preview"
+      onClick={(e) => {
+        if (e.target === e.currentTarget) onClose();
+      }}
       className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/80 backdrop-blur-md animate-fade-in"
     >
-      <div className="relative w-full max-w-4xl bg-white text-slate-900 rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[92vh]">
+      <div 
+        data-lenis-prevent
+        className="relative w-full max-w-4xl bg-white text-slate-900 rounded-2xl shadow-2xl overflow-hidden flex flex-col h-[90vh] max-h-[92vh]"
+      >
         {/* Top Header Bar */}
-        <div className="bg-[#0f172a] text-white px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between border-b border-slate-800 gap-2">
+        <div className="shrink-0 bg-[#0f172a] text-white px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between border-b border-slate-800 gap-2">
           <div className="flex items-center gap-3 min-w-0">
             <span className="font-bold text-sm sm:text-base md:text-lg text-white truncate">Pratik Ghodke — Resume Preview</span>
             <span className="hidden sm:inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 shrink-0">
@@ -63,7 +69,12 @@ export const ResumeModal = ({ isOpen, onClose }) => {
         </div>
 
         {/* Scrollable Document Body */}
-        <div className="p-4 sm:p-8 lg:p-10 overflow-y-auto space-y-6 text-sm leading-relaxed font-sans bg-white selection:bg-sky-100 selection:text-sky-900">
+        <div 
+          data-lenis-prevent
+          tabIndex={0}
+          className="flex-1 min-h-0 overflow-y-auto overscroll-contain p-4 sm:p-8 lg:p-10 space-y-6 text-sm leading-relaxed font-sans bg-white selection:bg-sky-100 selection:text-sky-900 focus:outline-none"
+          style={{ WebkitOverflowScrolling: 'touch' }}
+        >
           {/* Header */}
           <div className="text-center border-b border-slate-200 pb-5">
             <h1 className="text-2xl sm:text-3xl font-extrabold uppercase tracking-tight text-slate-900 mb-1">
@@ -209,7 +220,7 @@ export const ResumeModal = ({ isOpen, onClose }) => {
         </div>
 
         {/* Modal Footer */}
-        <div className="bg-slate-50 px-4 sm:px-6 py-3 border-t border-slate-200 flex flex-wrap items-center justify-between gap-2">
+        <div className="shrink-0 bg-slate-50 px-4 sm:px-6 py-3 border-t border-slate-200 flex flex-wrap items-center justify-between gap-2">
           <span className="text-[11px] sm:text-xs text-slate-500">
             Matching official LaTeX version (<code className="text-slate-700">Pratik_Ghodke_Resume.tex</code>)
           </span>
