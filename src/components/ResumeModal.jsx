@@ -124,7 +124,7 @@ export const ResumeModal = ({ isOpen, onClose }) => {
               </div>
               <ul className="list-disc ml-5 space-y-1 text-xs text-slate-700">
                 <li><strong>Full-Stack Leadership:</strong> Led mobile frontend and backend microservices architecture across commercial client applications in <strong>Flutter, Dart, Java Spring Boot</strong>, and <strong>PostgreSQL</strong>.</li>
-                <li><strong>Neo Parlour (Dual-App SaaS &amp; CRM):</strong> Architected dual-app Google Play ecosystem (Customer Booking &amp; Retail App + Salon Business CRM &amp; Staff Portal); authored Spring Boot 3 scheduling microservices with JPA @Version optimistic locking, staff attendance/commission modules, and inventory controls.</li>
+                <li><strong>Neo Parlour (Dual-App SaaS &amp; CRM)</strong> [<a href="https://www.neoparlour.com/" target="_blank" rel="noopener noreferrer" className="text-sky-600 hover:underline">Web</a> | <a href="https://play.google.com/store/apps/details?id=com.neoparlour.customer" target="_blank" rel="noopener noreferrer" className="text-sky-600 hover:underline">Customer App</a> | <a href="https://play.google.com/store/apps/details?id=com.neoparlour.owner" target="_blank" rel="noopener noreferrer" className="text-sky-600 hover:underline">Owner CRM</a>]: Architected dual-app Google Play ecosystem; authored Spring Boot 3 scheduling microservices with JPA @Version optimistic locking, staff attendance/commission modules, and inventory controls.</li>
                 <li><strong>NeoCloudBites (Delivery App):</strong> Developed cross-platform Flutter application featuring dynamic menu browsing, cart state management, and an interactive <strong>OpenStreetMap location picker</strong> with reverse geocoding for precise delivery address selection.</li>
                 <li><strong>Resilient Networking &amp; Flags:</strong> Implemented modular <strong>Dio</strong> networking layer with custom interceptors for automated JWT authorization, error normalization, and remote feature flags for controlled rollouts.</li>
                 <li><strong>Play Store Release:</strong> Managed end-to-end mobile release pipelines, packaging signed Android App Bundles (<strong>AAB</strong>), meeting Google Play compliance, and deploying to the <strong>Google Play Console</strong>.</li>
@@ -170,7 +170,12 @@ export const ResumeModal = ({ isOpen, onClose }) => {
             </h2>
             <div>
               <div className="flex flex-wrap items-baseline justify-between gap-1 mb-1">
-                <span className="font-bold text-slate-900">NeaLife — Online Psychometric &amp; Psychological Assessment Platform</span>
+                <span className="font-bold text-slate-900">
+                  NeaLife — Online Psychometric &amp; Psychological Assessment Platform{' '}
+                  <span className="font-normal text-slate-600">
+                    [<a href="https://nealife.in" target="_blank" rel="noopener noreferrer" className="text-sky-600 hover:underline">nealife.in</a> | <a href="https://assess.nealife.in" target="_blank" rel="noopener noreferrer" className="text-sky-600 hover:underline">assess.nealife.in</a>]
+                  </span>
+                </span>
                 <span className="text-xs text-slate-600 italic">Java 21, Spring Boot 3, Spring Security 6, PostgreSQL, AWS, Docker</span>
               </div>
               <ul className="list-disc ml-5 space-y-1 text-xs text-slate-700">
