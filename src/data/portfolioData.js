@@ -214,6 +214,7 @@ export const portfolioData = {
       role: "Lead Backend Developer (Spring Boot & Systems)",
       liveUrl: "https://nealife.in",
       portalUrl: "https://assess.nealife.in",
+      portalLabel: "Assess Engine",
       summary:
         "Enterprise-grade online psychometric and psychological evaluation platform scientifically designed for cognitive, behavioral, and emotional assessment across 1,300+ standardized tests and mapped to 3,000+ career roles.",
       problem:
@@ -254,7 +255,7 @@ export const portfolioData = {
       category: "Full-Stack",
       tag: "SaaS Platform",
       status: "In Production",
-      liveUrl: "https://sb.neoparlour.com",
+      liveUrl: "https://www.neoparlour.com/",
       summary:
         "Smart salon and appointment management SaaS platform with multi-role access for customers, salon managers, and service professionals.",
       problem:

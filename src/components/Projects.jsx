@@ -160,7 +160,7 @@ export const Projects = () => {
                             rel="noopener noreferrer"
                             className="w-full sm:w-auto inline-flex items-center justify-center min-h-[44px] gap-2 px-4 py-3 rounded-xl bg-indigo-500/10 hover:bg-indigo-500/20 text-indigo-300 hover:text-white border border-indigo-500/30 font-mono text-xs tracking-wider uppercase transition-colors"
                           >
-                            <span>Assess Engine</span>
+                            <span>{project.portalLabel || 'Launch Portal'}</span>
                             <ArrowUpRight className="w-4 h-4" />
                           </a>
                         </Magnetic>
@@ -458,7 +458,7 @@ export const Projects = () => {
                   rel="noopener noreferrer"
                   className="min-h-[44px] inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl text-xs font-mono tracking-wider uppercase font-bold text-white bg-gradient-to-r from-sky-500 to-indigo-600 hover:from-sky-400 hover:to-indigo-500 shadow-lg shadow-sky-500/25 transition-all"
                 >
-                  <span>Assessment Engine</span>
+                  <span>{selectedProject.portalLabel || 'Launch Portal'}</span>
                   <ExternalLink className="w-4 h-4" />
                 </a>
               )}
