@@ -165,6 +165,20 @@ export const Projects = () => {
                           </a>
                         </Magnetic>
                       )}
+
+                      {project.businessAppUrl && (
+                        <Magnetic strength={0.2} className="w-full sm:w-auto">
+                          <a
+                            href={project.businessAppUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="w-full sm:w-auto inline-flex items-center justify-center min-h-[44px] gap-2 px-4 py-3 rounded-xl bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-300 hover:text-white border border-emerald-500/30 font-mono text-xs tracking-wider uppercase transition-colors"
+                          >
+                            <span>{project.businessAppLabel || 'Business CRM'}</span>
+                            <ArrowUpRight className="w-4 h-4" />
+                          </a>
+                        </Magnetic>
+                      )}
                     </div>
                   </div>
 
@@ -232,21 +246,45 @@ export const Projects = () => {
                       {project.id === 'neo-parlour' && (
                         <div className="space-y-3 font-mono text-xs mb-4">
                           <div className="p-3 rounded-xl bg-white/[0.02] border border-white/[0.05]">
-                            <div className="flex items-center justify-between text-[11px] text-sky-400 mb-1.5 font-bold uppercase">
-                              <span>SCHEDULING LOCK TELEMETRY</span>
-                              <span className="text-emerald-400">JPA @VERSION</span>
+                            <div className="flex items-center justify-between text-[11px] text-sky-400 mb-2 font-bold uppercase">
+                              <span>DUAL-APP ECOSYSTEM</span>
+                              <span className="text-emerald-400">GOOGLE PLAY VERIFIED</span>
                             </div>
-                            <div className="flex items-center gap-1.5 text-[10px] text-slate-300">
-                              <span className="px-2 py-0.5 rounded bg-sky-500/10 text-sky-300">SLOT QUERY</span>
+                            <div className="flex items-center gap-1 text-[9px] sm:text-[10px] text-slate-300 overflow-x-auto py-1">
+                              <span className="px-1.5 py-0.5 rounded bg-sky-500/15 text-sky-300 shrink-0 font-bold">CUSTOMER APP</span>
+                              <span>+</span>
+                              <span className="px-1.5 py-0.5 rounded bg-indigo-500/15 text-indigo-300 shrink-0 font-bold">BUSINESS CRM</span>
                               <span>→</span>
-                              <span className="px-2 py-0.5 rounded bg-indigo-500/10 text-indigo-300">LOCK VERIFY</span>
+                              <span className="px-1.5 py-0.5 rounded bg-purple-500/15 text-purple-300 shrink-0 font-bold">SPRING BOOT 3</span>
                               <span>→</span>
-                              <span className="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-300">TX COMMIT</span>
+                              <span className="px-1.5 py-0.5 rounded bg-emerald-500/15 text-emerald-300 shrink-0 font-bold">POSTGRESQL</span>
                             </div>
                           </div>
+
+                          <div className="p-3 rounded-xl bg-white/[0.02] border border-white/[0.05]">
+                            <div className="flex items-center justify-between text-[11px] text-emerald-400 mb-1.5 font-bold uppercase">
+                              <span>SCHEDULING LOCK TELEMETRY</span>
+                              <span className="text-sky-400 font-bold">JPA @VERSION</span>
+                            </div>
+                            <div className="space-y-2 text-[10px]">
+                              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-0.5 sm:gap-2">
+                                <span className="text-slate-400">Concurrency Protocol:</span>
+                                <span className="text-emerald-300 font-mono font-bold">Zero Double-Booking</span>
+                              </div>
+                              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-0.5 sm:gap-2">
+                                <span className="text-slate-400">Salon Operations &amp; CRM:</span>
+                                <span className="text-indigo-300 font-mono">Staff Attendance • Retail Inventory</span>
+                              </div>
+                              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-0.5 sm:gap-2">
+                                <span className="text-slate-400">RBAC Architecture:</span>
+                                <span className="text-slate-300">Owner • Manager • Stylist • Customer</span>
+                              </div>
+                            </div>
+                          </div>
+
                           <div className="p-2.5 rounded-xl bg-white/[0.02] border border-white/[0.05] flex items-center justify-between text-[11px]">
-                            <span className="text-slate-400">GEOCODING:</span>
-                            <span className="text-sky-300">OpenStreetMap Reverse Geocoding</span>
+                            <span className="text-slate-400">PRODUCTION DEPLOYMENT:</span>
+                            <span className="text-sky-300">Live Website • Play Store AABs</span>
                           </div>
                         </div>
                       )}
@@ -459,6 +497,17 @@ export const Projects = () => {
                   className="min-h-[44px] inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl text-xs font-mono tracking-wider uppercase font-bold text-white bg-gradient-to-r from-sky-500 to-indigo-600 hover:from-sky-400 hover:to-indigo-500 shadow-lg shadow-sky-500/25 transition-all"
                 >
                   <span>{selectedProject.portalLabel || 'Launch Portal'}</span>
+                  <ExternalLink className="w-4 h-4" />
+                </a>
+              )}
+              {selectedProject.businessAppUrl && (
+                <a
+                  href={selectedProject.businessAppUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="min-h-[44px] inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl text-xs font-mono tracking-wider uppercase font-bold text-white bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 shadow-lg shadow-emerald-500/25 transition-all"
+                >
+                  <span>{selectedProject.businessAppLabel || 'Business CRM'}</span>
                   <ExternalLink className="w-4 h-4" />
                 </a>
               )}
